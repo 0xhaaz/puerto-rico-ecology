@@ -1,0 +1,429 @@
+{
+  "boricua_biodiversity_database": {
+    "metadata": {
+      "version": "1.0.0",
+      "last_updated": "2024-01-01",
+      "total_species": 4487,
+      "endemic_species": 309,
+      "cultural_species": 156,
+      "threatened_species": 147,
+      "data_license": "CC BY-SA 4.0",
+      "cultural_protocol": "FPIC_required",
+      "blockchain_compatible": true
+    },
+    "vertebrates": {
+      "birds": {
+        "total_species": 238,
+        "endemic_species": 17,
+        "critically_endangered": 1,
+        "endemic_list": [
+          {
+            "id": "bird_001",
+            "scientific_name": "Amazona vittata",
+            "common_name": "Puerto Rican Parrot",
+            "taino_name": "Iguaca",
+            "status": "critically_endangered",
+            "population": 500,
+            "cultural_significance": "highest",
+            "habitat": ["rainforest", "mountain_forest"],
+            "ecosystem_role": ["seed_dispersal", "indicator_species"],
+            "traditional_uses": ["ceremonial", "spiritual_messenger"],
+            "conservation_priority": 10,
+            "nft_ready": true,
+            "web3_metadata": {
+              "unique_traits": ["national_bird", "endemic", "critically_endangered"],
+              "rarity_score": 100,
+              "cultural_value": 100,
+              "ecological_value": 95
+            }
+          },
+          {
+            "id": "bird_002", 
+            "scientific_name": "Todus mexicanus",
+            "common_name": "Puerto Rican Tody",
+            "taino_name": "Comeñame",
+            "status": "stable",
+            "cultural_significance": "high",
+            "habitat": ["all_forests", "urban_gardens"],
+            "ecosystem_role": ["insect_control", "indicator_species"],
+            "traditional_uses": ["good_luck_symbol", "art_inspiration"],
+            "conservation_priority": 6,
+            "nft_ready": true,
+            "web3_metadata": {
+              "unique_traits": ["jewel_like", "endemic", "cultural_icon"],
+              "rarity_score": 75,
+              "cultural_value": 85,
+              "ecological_value": 80
+            }
+          }
+        ]
+      },
+      "reptiles": {
+        "total_species": 77,
+        "endemic_species": 46,
+        "endemism_rate": 59.7,
+        "critically_endangered": 2,
+        "featured_species": [
+          {
+            "id": "reptile_001",
+            "scientific_name": "Chilabothrus inornatus",
+            "common_name": "Puerto Rican Boa",
+            "taino_name": "Majá",
+            "status": "vulnerable",
+            "cultural_significance": "highest",
+            "habitat": ["caves", "forests"],
+            "ecosystem_role": ["apex_predator", "rodent_control"],
+            "traditional_significance": ["sacred_serpent", "water_spirit", "fertility_symbol"],
+            "conservation_priority": 9,
+            "nft_ready": true,
+            "web3_metadata": {
+              "unique_traits": ["largest_predator", "sacred", "endemic"],
+              "rarity_score": 90,
+              "cultural_value": 100,
+              "ecological_value": 95
+            }
+          },
+          {
+            "id": "reptile_002",
+            "scientific_name": "Anolis cuvieri", 
+            "common_name": "Puerto Rican Giant Anole",
+            "status": "vulnerable",
+            "cultural_significance": "medium",
+            "habitat": ["mature_forest"],
+            "ecosystem_role": ["predator", "indicator_species"],
+            "conservation_priority": 8,
+            "web3_metadata": {
+              "unique_traits": ["largest_anole", "forest_dependent", "endemic"],
+              "rarity_score": 80,
+              "cultural_value": 60,
+              "ecological_value": 85
+            }
+          }
+        ]
+      },
+      "amphibians": {
+        "total_species": 26,
+        "endemic_species": 15,
+        "threatened_percentage": 53.8,
+        "coqui_species": [
+          {
+            "id": "amphibian_001",
+            "scientific_name": "Eleutherodactylus coqui",
+            "common_name": "Common Coquí",
+            "status": "stable",
+            "cultural_significance": "highest",
+            "sound_frequency": "2000-8000_hz",
+            "habitat": ["ubiquitous"],
+            "ecosystem_role": ["insect_control", "cultural_symbol"],
+            "traditional_significance": ["soul_of_puerto_rico", "night_music"],
+            "conservation_priority": 7,
+            "nft_ready": true,
+            "web3_metadata": {
+              "unique_traits": ["national_symbol", "distinctive_call", "endemic"],
+              "rarity_score": 70,
+              "cultural_value": 100,
+              "ecological_value": 85,
+              "audio_signature": "ko-kee_call_pattern"
+            }
+          },
+          {
+            "id": "amphibian_002",
+            "scientific_name": "Eleutherodactylus jasperi",
+            "common_name": "Golden Coquí",
+            "status": "critically_endangered",
+            "population": "possibly_extinct",
+            "cultural_significance": "very_high",
+            "habitat": ["high_elevation_streams"],
+            "conservation_priority": 10,
+            "web3_metadata": {
+              "unique_traits": ["golden_color", "possibly_extinct", "endemic"],
+              "rarity_score": 100,
+              "cultural_value": 95,
+              "ecological_value": 90
+            }
+          }
+        ]
+      },
+      "marine_fish": {
+        "total_species": 803,
+        "endemic_species": 5,
+        "commercial_species": 165,
+        "cultural_importance": "critical",
+        "featured_species": [
+          {
+            "id": "fish_001",
+            "scientific_name": "Coryphaena hippurus",
+            "common_name": "Dorado",
+            "taino_name": "Dorado",
+            "status": "stable",
+            "cultural_significance": "very_high",
+            "habitat": ["pelagic", "offshore"],
+            "traditional_fishing": true,
+            "economic_value": "high",
+            "ecosystem_role": ["pelagic_predator"],
+            "conservation_priority": 6,
+            "web3_metadata": {
+              "unique_traits": ["traditional_target", "game_fish", "cultural_icon"],
+              "rarity_score": 40,
+              "cultural_value": 90,
+              "ecological_value": 75,
+              "economic_value": 85
+            }
+          }
+        ]
+      }
+    },
+    "plants": {
+      "total_species": 3309,
+      "endemic_species": 245,
+      "sacred_trees": [
+        {
+          "id": "tree_001",
+          "scientific_name": "Ceiba pentandra",
+          "common_name": "Ceiba",
+          "taino_name": "Ceiba",
+          "status": "sacred",
+          "cultural_significance": "highest",
+          "spiritual_role": "cosmic_pillar",
+          "habitat": ["throughout_island"],
+          "ecosystem_services": ["carbon_storage", "wildlife_habitat", "cultural_center"],
+          "traditional_uses": ["spiritual_ceremonies", "community_center", "navigation_landmark"],
+          "conservation_priority": 10,
+          "protected_status": "heritage_tree",
+          "nft_ready": true,
+          "web3_metadata": {
+            "unique_traits": ["sacred_tree", "community_center", "spiritual_significance"],
+            "rarity_score": 100,
+            "cultural_value": 100,
+            "ecological_value": 95,
+            "spiritual_value": 100
+          }
+        },
+        {
+          "id": "tree_002",
+          "scientific_name": "Thespesia grandiflora",
+          "common_name": "Maga",
+          "status": "endemic",
+          "cultural_significance": "highest",
+          "designation": "national_flower",
+          "habitat": ["forests"],
+          "conservation_status": "endangered",
+          "ecosystem_role": ["pollinator_support", "indicator_species"],
+          "traditional_uses": ["ceremonial", "medicinal", "decorative"],
+          "conservation_priority": 9,
+          "web3_metadata": {
+            "unique_traits": ["national_flower", "endemic", "endangered"],
+            "rarity_score": 95,
+            "cultural_value": 100,
+            "ecological_value": 85
+          }
+        }
+      ],
+      "medicinal_plants": {
+        "total_documented": 180,
+        "traditional_preparations": 25,
+        "featured_species": [
+          {
+            "id": "plant_001",
+            "scientific_name": "Guaiacum officinale",
+            "common_name": "Lignum Vitae",
+            "taino_name": "Wood of Life",
+            "status": "native",
+            "cultural_significance": "very_high",
+            "traditional_uses": ["anti_inflammatory", "arthritis", "spiritual_healing"],
+            "preparation_methods": ["resin_extraction", "bark_tea", "wood_burning"],
+            "conservation_priority": 8,
+            "web3_metadata": {
+              "unique_traits": ["medicinal", "extremely_hard_wood", "traditional_medicine"],
+              "rarity_score": 80,
+              "cultural_value": 95,
+              "ecological_value": 70,
+              "medicinal_value": 95
+            }
+          }
+        ]
+      }
+    },
+    "marine_life": {
+      "coral_reefs": {
+        "area_square_miles": 200,
+        "economic_value_annual": 1400000000,
+        "threat_level": "93_percent_threatened",
+        "species_supported": 1000,
+        "featured_corals": [
+          {
+            "id": "coral_001",
+            "scientific_name": "Acropora palmata",
+            "common_name": "Elkhorn Coral",
+            "status": "critically_endangered",
+            "cultural_significance": "high",
+            "ecosystem_role": ["reef_building", "storm_protection", "fish_habitat"],
+            "conservation_priority": 10,
+            "web3_metadata": {
+              "unique_traits": ["reef_builder", "critically_endangered", "storm_protection"],
+              "rarity_score": 100,
+              "cultural_value": 80,
+              "ecological_value": 100
+            }
+          }
+        ]
+      },
+      "marine_mammals": [
+        {
+          "id": "mammal_001",
+          "scientific_name": "Trichechus manatus",
+          "common_name": "West Indian Manatee",
+          "status": "endangered",
+          "population_pr": 600,
+          "cultural_significance": "very_high",
+          "taino_beliefs": "gentle_spirits",
+          "habitat": ["mangroves", "coastal_waters"],
+          "ecosystem_role": ["seagrass_management", "ecosystem_engineer"],
+          "conservation_priority": 9,
+          "web3_metadata": {
+            "unique_traits": ["endangered", "cultural_icon", "gentle_giant"],
+            "rarity_score": 90,
+            "cultural_value": 90,
+            "ecological_value": 85
+          }
+        }
+      ]
+    },
+    "insects": {
+      "total_species": 3000,
+      "endemic_species": 200,
+      "featured_species": [
+        {
+          "id": "insect_001", 
+          "scientific_name": "Camponotus taino",
+          "common_name": "Taíno Ant",
+          "status": "endemic",
+          "cultural_significance": "high",
+          "named_after": "taino_people",
+          "habitat": ["forests"],
+          "ecosystem_role": ["soil_aeration", "seed_dispersal"],
+          "conservation_priority": 6,
+          "web3_metadata": {
+            "unique_traits": ["named_after_taino", "endemic", "ecosystem_engineer"],
+            "rarity_score": 70,
+            "cultural_value": 85,
+            "ecological_value": 75
+          }
+        }
+      ]
+    },
+    "conservation_status": {
+      "protected_areas": {
+        "total_percentage": 16,
+        "marine_protected": 27,
+        "terrestrial_protected": 12,
+        "major_areas": [
+          "el_yunque_national_forest",
+          "guanica_dry_forest",
+          "vieques_national_wildlife_refuge",
+          "mona_island_natural_reserve"
+        ]
+      },
+      "threats": [
+        "habitat_loss",
+        "invasive_species", 
+        "climate_change",
+        "pollution",
+        "hurricane_damage",
+        "overfishing"
+      ],
+      "success_stories": [
+        "puerto_rican_parrot_recovery",
+        "marine_protected_areas",
+        "community_conservation",
+        "traditional_knowledge_integration"
+      ]
+    },
+    "cultural_connections": {
+      "taino_ecological_knowledge": {
+        "documented_practices": 150,
+        "medicinal_plant_knowledge": 180,
+        "agricultural_techniques": 15,
+        "fishing_methods": 12,
+        "navigation_skills": 8,
+        "spiritual_ecology": true,
+        "seasonal_calendars": 24,
+        "sacred_sites": 50
+      },
+      "contemporary_connections": {
+        "cultural_festivals": 25,
+        "traditional_recipes": 100,
+        "artisan_crafts": 40,
+        "medicinal_practices": 60,
+        "fishing_traditions": 30,
+        "agricultural_heritage": 20
+      }
+    },
+    "web3_integration": {
+      "nft_collections": [
+        "endemic_birds_collection",
+        "sacred_trees_collection", 
+        "coqui_sounds_collection",
+        "coral_reef_collection",
+        "traditional_knowledge_collection"
+      ],
+      "dao_governance": {
+        "conservation_decisions": true,
+        "traditional_knowledge_protection": true,
+        "community_benefit_sharing": true,
+        "research_prioritization": true
+      },
+      "tokenomics": {
+        "conservation_tokens": "CONSERVE",
+        "cultural_tokens": "TAINO",
+        "ecosystem_service_tokens": "ECOSYSTEM",
+        "research_tokens": "RESEARCH"
+      },
+      "smart_contracts": [
+        "species_conservation_funding",
+        "traditional_knowledge_protection",
+        "community_benefit_sharing",
+        "research_data_verification",
+        "sustainable_tourism_revenue"
+      ]
+    },
+    "research_priorities": {
+      "urgent": [
+        "document_remaining_traditional_knowledge",
+        "monitor_critically_endangered_species",
+        "assess_climate_change_impacts",
+        "evaluate_invasive_species_control"
+      ],
+      "high": [
+        "restore_degraded_habitats",
+        "expand_marine_protected_areas",
+        "integrate_traditional_and_scientific_knowledge",
+        "develop_sustainable_tourism"
+      ],
+      "medium": [
+        "complete_species_inventories",
+        "assess_ecosystem_service_values", 
+        "develop_conservation_technology",
+        "expand_educational_programs"
+      ]
+    },
+    "data_sources": [
+      "puerto_rico_department_natural_resources",
+      "university_puerto_rico_research",
+      "taino_cultural_practitioners",
+      "international_conservation_organizations",
+      "local_fishing_communities",
+      "traditional_knowledge_holders",
+      "scientific_literature",
+      "field_research_data"
+    ],
+    "usage_terms": {
+      "attribution_required": true,
+      "commercial_use": "with_permission",
+      "traditional_knowledge": "FPIC_required",
+      "data_sharing": "open_with_attribution",
+      "modification": "allowed_with_attribution",
+      "cultural_protocols": "must_be_respected"
+    }
+  }
+}

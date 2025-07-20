@@ -1,0 +1,383 @@
+{
+  "boricua_biodiversity_api": {
+    "version": "1.0.0",
+    "description": "Culturally respectful API for Borikén's biodiversity with web3 integration",
+    "cultural_protocol": {
+      "required_acknowledgment": "This knowledge belongs to the Indigenous peoples of Borikén and their descendants",
+      "usage_restrictions": "Traditional knowledge requires Free, Prior, and Informed Consent (FPIC)",
+      "attribution_required": true,
+      "commercial_use_requires_consent": true,
+      "spiritual_significance_respect": "mandatory"
+    },
+    "endpoints": {
+      "species": {
+        "base_url": "/api/v1/species",
+        "methods": {
+          "GET": {
+            "description": "Retrieve species information",
+            "parameters": {
+              "taxonomy": {
+                "type": "string",
+                "options": ["vertebrates", "invertebrates", "plants", "fungi"],
+                "required": true
+              },
+              "endemic_only": {
+                "type": "boolean",
+                "default": false
+              },
+              "cultural_significance": {
+                "type": "string",
+                "options": ["high", "moderate", "low", "sacred"],
+                "filter": true
+              },
+              "conservation_status": {
+                "type": "string",
+                "options": ["extinct", "critically_endangered", "endangered", "vulnerable", "stable"]
+              },
+              "traditional_use": {
+                "type": "string",
+                "options": ["medicinal", "ceremonial", "food", "craft", "spiritual"],
+                "filter": true
+              }
+            },
+            "response_format": {
+              "species_id": "string",
+              "scientific_name": "string",
+              "common_name": "string",
+              "taino_name": "string",
+              "cultural_significance": "string",
+              "traditional_uses": ["array"],
+              "conservation_status": "string",
+              "habitat": ["array"],
+              "endemic_status": "boolean",
+              "cultural_protocol": {
+                "sensitivity_level": "string",
+                "usage_restrictions": "string",
+                "attribution_required": "boolean"
+              },
+              "web3_metadata": {
+                "nft_ready": "boolean",
+                "rarity_score": "number",
+                "cultural_value": "number",
+                "ecological_value": "number",
+                "unique_traits": ["array"]
+              }
+            }
+          }
+        }
+      },
+      "cultural_knowledge": {
+        "base_url": "/api/v1/cultural",
+        "authentication_required": true,
+        "cultural_protocol": {
+          "fpic_required": true,
+          "community_approval": "mandatory",
+          "elder_consultation": "required",
+          "spiritual_protocol": "essential"
+        },
+        "methods": {
+          "GET": {
+            "description": "Access traditional ecological knowledge (requires authentication and cultural protocols)",
+            "parameters": {
+              "knowledge_type": {
+                "type": "string",
+                "options": ["medicinal", "ceremonial", "ecological", "astronomical", "seasonal"],
+                "required": true
+              },
+              "sensitivity_level": {
+                "type": "string",
+                "options": ["public", "community", "sacred"],
+                "access_control": true
+              },
+              "species_context": {
+                "type": "string",
+                "description": "species ID for context-specific knowledge"
+              }
+            },
+            "response_format": {
+              "knowledge_id": "string",
+              "type": "string",
+              "content": "string",
+              "source_attribution": "string",
+              "cultural_context": "string",
+              "sensitivity_level": "string",
+              "usage_restrictions": "string",
+              "related_species": ["array"],
+              "traditional_timing": "string",
+              "spiritual_significance": "string",
+              "access_protocols": {
+                "fpic_status": "string",
+                "community_approval": "string",
+                "restriction_level": "string"
+              }
+            }
+          }
+        }
+      },
+      "ecosystems": {
+        "base_url": "/api/v1/ecosystems",
+        "methods": {
+          "GET": {
+            "description": "Ecosystem information with cultural and ecological context",
+            "parameters": {
+              "ecosystem_type": {
+                "type": "string",
+                "options": ["rainforest", "dry_forest", "mangrove", "coral_reef", "cave_system", "cloud_forest"],
+                "required": true
+              },
+              "include_cultural_context": {
+                "type": "boolean",
+                "default": true
+              },
+              "traditional_management": {
+                "type": "boolean",
+                "description": "Include traditional management practices"
+              }
+            },
+            "response_format": {
+              "ecosystem_id": "string",
+              "name": "string",
+              "taino_name": "string",
+              "description": "string",
+              "location": {
+                "coordinates": "array",
+                "area_km2": "number",
+                "elevation_range": "string"
+              },
+              "species_count": {
+                "total": "number",
+                "endemic": "number",
+                "threatened": "number"
+              },
+              "cultural_significance": "string",
+              "traditional_management": {
+                "practices": ["array"],
+                "seasonal_restrictions": ["array"],
+                "sacred_sites": "boolean",
+                "spiritual_significance": "string"
+              },
+              "conservation_status": "string",
+              "threats": ["array"],
+              "protection_level": "string"
+            }
+          }
+        }
+      },
+      "conservation": {
+        "base_url": "/api/v1/conservation",
+        "methods": {
+          "GET": {
+            "description": "Conservation status and actions",
+            "parameters": {
+              "status": {
+                "type": "string",
+                "options": ["critically_endangered", "endangered", "vulnerable", "threatened", "stable"]
+              },
+              "action_type": {
+                "type": "string",
+                "options": ["habitat_protection", "species_recovery", "community_based", "traditional_practices"]
+              },
+              "region": {
+                "type": "string",
+                "description": "specific geographic region"
+              }
+            }
+          },
+          "POST": {
+            "description": "Submit conservation observation or action",
+            "authentication_required": true,
+            "community_validation": true
+          }
+        }
+      },
+      "web3": {
+        "base_url": "/api/v1/web3",
+        "blockchain_compatible": true,
+        "methods": {
+          "nft_metadata": {
+            "description": "Generate NFT metadata for species",
+            "parameters": {
+              "species_id": {
+                "type": "string",
+                "required": true
+              },
+              "include_cultural_significance": {
+                "type": "boolean",
+                "default": true,
+                "cultural_protocol_required": true
+              }
+            },
+            "response_format": {
+              "name": "string",
+              "description": "string",
+              "image": "string",
+              "external_url": "string",
+              "attributes": [
+                {
+                  "trait_type": "Endemic Status",
+                  "value": "string"
+                },
+                {
+                  "trait_type": "Cultural Significance",
+                  "value": "string"
+                },
+                {
+                  "trait_type": "Conservation Status",
+                  "value": "string"
+                },
+                {
+                  "trait_type": "Ecosystem",
+                  "value": "string"
+                },
+                {
+                  "trait_type": "Traditional Use",
+                  "value": "string"
+                }
+              ],
+              "cultural_protocol": {
+                "attribution": "string",
+                "restrictions": "string",
+                "community_benefits": "string"
+              }
+            }
+          },
+          "dao_governance": {
+            "description": "Decentralized governance for biodiversity conservation",
+            "methods": {
+              "proposals": {
+                "create": "POST",
+                "vote": "POST",
+                "execute": "POST"
+              },
+              "funding": {
+                "projects": "GET",
+                "contribute": "POST",
+                "distribute": "POST"
+              }
+            }
+          },
+          "token_economy": {
+            "description": "Biodiversity token economy",
+            "features": {
+              "conservation_rewards": "Tokens for conservation actions",
+              "traditional_knowledge_royalties": "Revenue sharing for knowledge contributors",
+              "ecosystem_services_payments": "Payments for ecosystem maintenance",
+              "community_governance": "Token-based decision making"
+            }
+          }
+        }
+      },
+      "research": {
+        "base_url": "/api/v1/research",
+        "methods": {
+          "citizen_science": {
+            "description": "Citizen science data collection and contribution",
+            "POST": {
+              "observation_submission": {
+                "species_id": "string",
+                "location": "coordinates",
+                "timestamp": "datetime",
+                "observation_type": "string",
+                "media": ["array"],
+                "observer_credentials": "string"
+              }
+            },
+            "GET": {
+              "project_list": "active citizen science projects",
+              "observation_data": "aggregated observation data"
+            }
+          },
+          "traditional_knowledge_documentation": {
+            "description": "Document and preserve traditional knowledge",
+            "authentication_required": true,
+            "cultural_protocols": "mandatory",
+            "community_approval": "required"
+          }
+        }
+      },
+      "education": {
+        "base_url": "/api/v1/education",
+        "methods": {
+          "learning_modules": {
+            "description": "Educational content for different audiences",
+            "parameters": {
+              "audience": {
+                "type": "string",
+                "options": ["children", "students", "researchers", "community", "developers"]
+              },
+              "topic": {
+                "type": "string",
+                "options": ["biodiversity", "conservation", "traditional_knowledge", "ecosystems", "cultural_heritage"]
+              },
+              "language": {
+                "type": "string",
+                "options": ["en", "es", "taino_reconstruction"],
+                "default": "en"
+              }
+            }
+          },
+          "interactive_tools": {
+            "species_identification": "AI-powered species identification tool",
+            "ecosystem_explorer": "Interactive ecosystem exploration",
+            "cultural_timeline": "Historical and cultural context timeline",
+            "conservation_games": "Educational games for conservation awareness"
+          }
+        }
+      }
+    },
+    "authentication": {
+      "methods": ["API_key", "OAuth2", "Web3_wallet"],
+      "cultural_verification": {
+        "community_member_status": "boolean",
+        "elder_approval": "string",
+        "traditional_knowledge_access_level": "string"
+      }
+    },
+    "rate_limiting": {
+      "public_endpoints": "1000 requests/hour",
+      "authenticated_endpoints": "5000 requests/hour",
+      "cultural_knowledge_endpoints": "100 requests/hour with approval"
+    },
+    "data_sovereignty": {
+      "indigenous_data_governance": "Indigenous Data Sovereignty principles",
+      "community_ownership": "Data owned by Boricua communities",
+      "benefit_sharing": "Revenue sharing with knowledge holders",
+      "cultural_protocols": "Mandatory cultural protocol compliance"
+    },
+    "blockchain_integration": {
+      "smart_contracts": {
+        "conservation_funding": "Automated funding for conservation projects",
+        "knowledge_attribution": "Immutable attribution for traditional knowledge",
+        "benefit_sharing": "Automatic revenue distribution",
+        "governance": "Decentralized decision making"
+      },
+      "tokenomics": {
+        "conservation_token": "Rewards for conservation actions",
+        "knowledge_token": "Compensation for knowledge sharing",
+        "governance_token": "Voting rights in ecosystem decisions",
+        "impact_token": "Measuring and rewarding ecological impact"
+      }
+    },
+    "cultural_compliance": {
+      "required_disclaimers": [
+        "Traditional knowledge belongs to Indigenous communities",
+        "Commercial use requires community consent",
+        "Cultural protocols must be respected",
+        "Benefits must be shared with knowledge holders"
+      ],
+      "prohibited_uses": [
+        "Commercialization without consent",
+        "Cultural appropriation",
+        "Misrepresentation of traditional knowledge",
+        "Unauthorized access to sacred knowledge"
+      ],
+      "best_practices": [
+        "Always attribute knowledge sources",
+        "Respect cultural sensitivities",
+        "Engage communities in decision making",
+        "Share benefits equitably",
+        "Maintain cultural protocols"
+      ]
+    }
+  }
+}
