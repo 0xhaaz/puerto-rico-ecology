@@ -1,6 +1,14 @@
 q
 npm run compile
 q
+ls -la
+q
+cd /workspace && rm -rf data game-context references assets smart-contracts
+q
+rm -rf data game-context references assets smart-contracts
+q
+npm run compile
+q
 mkdir -p contracts test docs scripts/deploy
 q
 mkdir -p contracts test docs scripts/deploy && rm smart-contracts/*.old && mv smart-contracts/*.sol contracts/ && mv smart-contracts/*.md docs/
