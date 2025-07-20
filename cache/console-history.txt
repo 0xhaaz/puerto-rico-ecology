@@ -1,3 +1,4 @@
+q
 npm run compile
 q
 mkdir -p contracts test docs scripts/deploy
