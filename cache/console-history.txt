@@ -1,0 +1,3 @@
+q
+node -e "const ethers = require('ethers'); const wallet = new ethers.Wallet('a6e9c13c9e8b4c5d8f2a7b6c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e'); console.log('Address:', wallet.address);"
+q

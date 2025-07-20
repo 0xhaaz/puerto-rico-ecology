@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
 
 /**
@@ -12,9 +11,7 @@ import "@openzeppelin/contracts/utils/Base64.sol";
  * @author haaz.eth
  */
 contract BoricuaSpeciesNFT is ERC721, Ownable {
-    using Counters for Counters.Counter;
-    
-    Counters.Counter private _tokenIdCounter;
+    uint256 private _tokenIdCounter;
     
     address public creator;
     address public bakineStudio;
@@ -41,7 +38,7 @@ contract BoricuaSpeciesNFT is ERC721, Ownable {
     );
     event SpeciesAdded(string scientificName, uint256 rarity);
     
-    constructor() ERC721("Boricua Species Collection", "BORIKUA") {
+    constructor() ERC721("Boricua Species Collection", "BORIKUA") Ownable(msg.sender) {
         creator = msg.sender;
         bakineStudio = msg.sender; // Initially set to creator
     }
@@ -62,8 +59,8 @@ contract BoricuaSpeciesNFT is ERC721, Ownable {
         require(_rarity >= 1 && _rarity <= 5, "Invalid rarity");
         require(!speciesExists[_scientificName], "Species already minted");
         
-        uint256 tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
+        uint256 tokenId = _tokenIdCounter;
+        _tokenIdCounter++;
         
         // Store metadata
         speciesData[tokenId] = SpeciesMetadata({
@@ -104,8 +101,8 @@ contract BoricuaSpeciesNFT is ERC721, Ownable {
         require(_rarity >= 1 && _rarity <= 5, "Invalid rarity");
         require(!speciesExists[_scientificName], "Species already minted");
         
-        uint256 tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
+        uint256 tokenId = _tokenIdCounter;
+        _tokenIdCounter++;
         
         // Store metadata
         speciesData[tokenId] = SpeciesMetadata({
@@ -128,7 +125,7 @@ contract BoricuaSpeciesNFT is ERC721, Ownable {
      * @dev Generate metadata JSON for token
      */
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
-        require(_exists(tokenId), "Token doesn't exist");
+        _requireOwned(tokenId);
         
         SpeciesMetadata memory species = speciesData[tokenId];
         
@@ -241,14 +238,14 @@ contract BoricuaSpeciesNFT is ERC721, Ownable {
      * @dev Get total supply
      */
     function totalSupply() external view returns (uint256) {
-        return _tokenIdCounter.current();
+        return _tokenIdCounter;
     }
     
     /**
      * @dev Get species metadata
      */
     function getSpeciesData(uint256 tokenId) external view returns (SpeciesMetadata memory) {
-        require(_exists(tokenId), "Token doesn't exist");
+        _requireOwned(tokenId);
         return speciesData[tokenId];
     }
     
