@@ -173,7 +173,7 @@ contract BoricuaSpeciesNFT is ERC721, Ownable {
                         species.tainoName,
                         '</text>',
                         '<text x="200" y="220" text-anchor="middle" fill="white" font-size="10">',
-                        species.isEndemic ? "Endemic to Borik\xC3\xA9n" : "Native Species",
+                        species.isEndemic ? "Endemic to Borikén" : "Native Species",
                         '</text>',
                         '<text x="200" y="280" text-anchor="middle" fill="white" font-size="8">',
                         "Rarity: ", _toString(species.rarity), "/5",

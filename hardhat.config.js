@@ -62,7 +62,7 @@ module.exports = {
     ]
   },
   paths: {
-    sources: "./smart-contracts",
+    sources: "./contracts",
     tests: "./test",
     cache: "./cache",
     artifacts: "./artifacts"

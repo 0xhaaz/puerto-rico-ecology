@@ -6,11 +6,14 @@
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy:sepolia": "hardhat run scripts/deploy-portfolio-demo.js --network baseSepolia",
-    "deploy:base": "hardhat run scripts/deploy-portfolio-demo.js --network base",
-    "verify:sepolia": "hardhat verify --network baseSepolia",
+    "deploy:sepolia": "hardhat run scripts/deploy/01-deploy-base-sepolia.js --network baseSepolia",
+    "deploy:base": "hardhat run scripts/deploy/01-deploy-base-sepolia.js --network base",
+    "verify": "hardhat verify --network baseSepolia",
     "node": "hardhat node",
-    "clean": "hardhat clean"
+    "clean": "hardhat clean",
+    "size": "hardhat size-contracts",
+    "coverage": "hardhat coverage",
+    "gas-report": "REPORT_GAS=true hardhat test"
   },
   "keywords": [
     "solidity",

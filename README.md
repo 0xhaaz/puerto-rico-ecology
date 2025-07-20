@@ -1,343 +1,240 @@
-# Borikén Biodiversity Knowledge Base 🌺🐸🦜
+# Borikén Biodiversity Portfolio 🌿
 
-*A comprehensive, culturally respectful ecological knowledge system for Puerto Rico (Borikén) that integrates Indigenous wisdom with modern science, optimized for web3/dapp development and IDE integration.*
+> **Professional Smart Contract Portfolio by haaz.eth**  
+> Demonstrating Base ecosystem development skills through Puerto Rico biodiversity data
 
-## 🌟 Overview
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue.svg)](https://soliditylang.org/)
+[![Hardhat](https://img.shields.io/badge/Framework-Hardhat-orange.svg)](https://hardhat.org/)
+[![Base](https://img.shields.io/badge/Network-Base%20Sepolia-blue.svg)](https://base.org/)
 
-The Borikén Biodiversity Knowledge Base is a revolutionary approach to documenting and preserving the rich ecological heritage of Puerto Rico while honoring the traditional knowledge of the Taíno people and contemporary Boricua communities. This repository serves as both a comprehensive scientific database and a cultural bridge, supporting modern conservation efforts, web3 applications, and sustainable development.
+**Portfolio Project by:** [haaz.eth](https://base.org)  
+**Revenue Model:** [bakine.studio](https://bakine.studio)
 
-### ✨ What Makes This Special
+## 🎯 **Professional Portfolio Overview**
 
-- **🏛️ Cultural Respectfulness**: Built with Indigenous data sovereignty principles and traditional knowledge protocols
-- **🔬 Scientific Accuracy**: Comprehensive species data with latest taxonomic and conservation information  
-- **⚡ Web3 Ready**: JSON APIs, NFT metadata, and blockchain integration for decentralized conservation
-- **🛠️ IDE Integrated**: Optimized for Cursor, Claude Desktop, and other development environments
-- **🌍 Community Owned**: Designed to benefit Indigenous communities and knowledge holders
+This project showcases **production-ready smart contract development** for the Base ecosystem, demonstrating:
 
-## 📊 Database Scope
+- **Multi-contract architecture** (Registry, NFT, DAO)
+- **Professional deployment practices** with automated scripts
+- **Gas optimization** and security best practices
+- **OpenZeppelin v5 integration** and latest Solidity patterns
+- **Revenue distribution** and payment systems
+- **Cultural data preservation** with technical innovation
 
-### 🐦 **Vertebrates**
-- **238 Bird Species** (17 endemic, including the sacred Iguaca)
-- **77 Reptile Species** (46 endemic, highest rate in Caribbean)
-- **13 Native Mammals** (3 endemic bats)
-- **19 Amphibian Species** (17 endemic, featuring the iconic Coquí)
-- **803 Marine Fish Species** (diverse coral reef ecosystems)
+## 📋 **Live Contracts (Base Sepolia)**
 
-### 🦋 **Invertebrates**
-- **5,000+ Insect Species** (many undescribed endemics)
-- **Endemic Beetle Complexes** (longhorns, weevils, ground beetles)
-- **Cave-Adapted Species** (unique karst fauna)
-- **Marine Invertebrates** (coral reef biodiversity hotspot)
+| Contract | Purpose | Address | Explorer |
+|----------|---------|---------|----------|
+| 🌿 **BiodiversityRegistry** | Species database | `[Deployed on Base Sepolia]` | [View →](https://sepolia.basescan.org) |
+| 🦜 **BoricuaSpeciesNFT** | NFT collection | `[Deployed on Base Sepolia]` | [View →](https://sepolia.basescan.org) |
+| 🗳️ **EcologyMiniDAO** | Governance system | `[Deployed on Base Sepolia]` | [View →](https://sepolia.basescan.org) |
 
-### 🌺 **Plants**
-- **2,400+ Vascular Plant Species** (300+ endemic)
-- **200+ Medicinal Plants** (traditional pharmacopeia)
-- **Endemic Tree Species** (unique Caribbean flora)
-- **Epiphyte Diversity** (orchids, bromeliads, ferns)
+## 🏗️ **Technical Architecture**
 
-### 🍄 **Fungi**
-- **400+ Documented Species** (many more undiscovered)
-- **Endemic Cave Fungi** (unique limestone karst species)
-- **Medicinal Mushrooms** (traditional healing applications)
-- **Mycorrhizal Networks** (forest ecosystem foundations)
-
-## 🎯 Key Features
-
-### 🔮 **Traditional Knowledge Integration**
-- **Taíno Names and Wisdom**: Indigenous terminology and ecological understanding
-- **Cultural Significance Ratings**: Sacred, ceremonial, and traditional use classifications
-- **Traditional Management Practices**: Sustainable harvesting and conservation methods
-- **Spiritual and Ceremonial Context**: Respectful documentation of sacred knowledge
-
-### 🚀 **Web3 and Blockchain Ready**
-- **NFT Metadata Generation**: Automated metadata for biodiversity collections
-- **DAO Governance Templates**: Decentralized conservation decision-making
-- **Token Economy Frameworks**: Economic incentives for conservation actions
-- **Smart Contract Integration**: Automated benefit-sharing and attribution
-
-### 🎛️ **IDE Integration**
-- **Cursor IDE Snippets**: Pre-built code templates for biodiversity apps
-- **Claude Desktop Context**: Rich ecological context for AI-assisted development
-- **API Endpoints**: RESTful services for easy data integration
-- **Cultural Protocol Validators**: Automated compliance checking
-
-### 🌍 **Conservation Focus**
-- **Threat Assessment**: Current conservation status and risk factors
-- **Action Plans**: Detailed recovery strategies for endangered species
-- **Community-Based Conservation**: Local stewardship and management
-- **Climate Adaptation**: Strategies for environmental change resilience
-
-## 🗂️ Repository Structure
-
+### **Smart Contract Stack**
 ```
-boricua-biodiversity-kb/
-├── 📁 data/
-│   ├── 🐦 species/vertebrates/
-│   │   ├── birds/endemic_birds.md
-│   │   ├── reptiles/endemic_reptiles.md
-│   │   ├── amphibians/coqui_species.md
-│   │   └── fish/marine_fish_diversity.md
-│   ├── 🦋 species/invertebrates/
-│   │   ├── insects/endemic_beetles.md
-│   │   └── arachnids/endemic_spiders.md
-│   ├── 🌺 species/plants/
-│   │   ├── trees/sacred_and_endemic_trees.md
-│   │   └── herbs/medicinal_plants.md
-│   ├── 🍄 species/fungi/
-│   │   └── endemic_and_culturally_significant_fungi.md
-│   ├── 🌿 ecosystems/
-│   │   ├── rainforest.md
-│   │   ├── dry_forest.md
-│   │   └── mangrove.md
-│   ├── 🏛️ cultural-connections/
-│   │   └── taino_ecological_knowledge.md
-│   ├── 🛡️ conservation-status/
-│   │   └── threatened_species_action_plans.md
-│   └── 🔗 api-ready/
-│       ├── species_database.json
-│       └── web3_integration_endpoints.json
-├── 📁 game-context/
-├── 📁 references/
-├── 🛠️ IDE_INTEGRATION_GUIDE.md
-├── 📋 EXPANSION_PROMPT.md
-└── 📖 README.md
+├── contracts/
+│   ├── BiodiversityRegistryDemo.sol    # Core data management
+│   ├── BoricuaSpeciesNFT.sol          # ERC-721 with metadata
+│   └── EcologyMiniDAO.sol             # Governance system
 ```
 
-## 🚀 Quick Start
+### **Key Features**
+- ✅ **Data Management** - Structured species registry with validation
+- ✅ **NFT Implementation** - Dynamic metadata with SVG generation
+- ✅ **DAO Governance** - Proposal creation and voting mechanisms
+- ✅ **Payment Systems** - Automated revenue distribution (70/30 split)
+- ✅ **Access Control** - Role-based permissions and security
+- ✅ **Gas Optimization** - Efficient storage patterns and IR compilation
 
-### For Developers
+## 🚀 **Quick Start**
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-org/boricua-biodiversity-kb.git
-   cd boricua-biodiversity-kb
-   ```
+### **Prerequisites**
+- Node.js 16+ and npm
+- Base Sepolia testnet ETH ([Get from faucet](https://faucets.chain.link/base-sepolia))
+- MetaMask or compatible wallet
 
-2. **Set Up IDE Integration**
-   - Follow the [IDE Integration Guide](./IDE_INTEGRATION_GUIDE.md)
-   - Configure Cursor or Claude Desktop with biodiversity context
-   - Install cultural protocol validators
+### **Installation**
+```bash
+git clone https://github.com/yourusername/borikua-biodiversity-portfolio
+cd borikua-biodiversity-portfolio
+npm install
+```
 
-3. **Explore the API**
-   ```javascript
-   // Example: Get endemic birds with cultural context
-   const response = await fetch('/api/v1/species?taxonomy=vertebrates&endemic_only=true&cultural_significance=high');
-   const endemicBirds = await response.json();
-   ```
+### **Environment Setup**
+```bash
+cp .env.example .env
+# Add your PRIVATE_KEY (without 0x prefix)
+```
 
-4. **Generate NFT Metadata**
-   ```javascript
-   // Example: Create culturally respectful NFT
-   const metadata = await generateSpeciesNFT('bird_001', {
-     includeCulturalSignificance: true,
-     communityBenefitsEnabled: true
-   });
-   ```
+### **Deployment**
+```bash
+# Compile contracts
+npm run compile
 
-### For Researchers
+# Deploy to Base Sepolia (FREE)
+npm run deploy:sepolia
 
-1. **Access Species Data**
-   - Browse comprehensive species documentation
-   - Access conservation status and threat assessments
-   - Review traditional knowledge with proper attribution
+# Verify contracts (optional)
+npm run verify:sepolia [CONTRACT_ADDRESS]
+```
 
-2. **Contribute Observations**
-   - Submit citizen science observations
-   - Document traditional knowledge (with community approval)
-   - Participate in collaborative research projects
+## 💼 **Professional Skills Demonstrated**
 
-3. **Citation Format**
-   ```
-   Borikén Biodiversity Knowledge Base. (2024). [Species/Topic]. 
-   Traditional knowledge of the Taíno people and Boricua communities. 
-   https://github.com/your-org/boricua-biodiversity-kb
-   ```
+### **Smart Contract Development**
+- **Solidity 0.8.20+** with latest language features
+- **OpenZeppelin v5** integration and best practices
+- **Custom error handling** and gas-efficient patterns
+- **Event-driven architecture** for off-chain integration
+- **Modular design** with separation of concerns
 
-## 🛡️ Cultural Protocols
+### **Base Ecosystem Expertise**
+- **Base Sepolia deployment** with proper network configuration
+- **L2 optimization** techniques and cost-effective patterns
+- **BaseScan integration** for contract verification
+- **Base-specific tooling** and development workflow
 
-### 🏛️ **Indigenous Data Sovereignty**
-This repository operates under Indigenous Data Sovereignty principles:
-- **Community Ownership**: Data belongs to Boricua communities
-- **FPIC Required**: Free, Prior, and Informed Consent for traditional knowledge
-- **Benefit Sharing**: Revenue and benefits shared with knowledge holders
-- **Cultural Protocols**: Mandatory respect for traditional practices
+### **Production Practices**
+- **Professional project structure** following industry standards
+- **Comprehensive testing** setup (ready for implementation)
+- **Automated deployment** scripts with error handling
+- **Documentation** and technical specifications
+- **Security considerations** and access control
 
-### 🔐 **Sacred Knowledge Protection**
-- **Sensitivity Levels**: Public, community-restricted, and sacred classifications
-- **Access Controls**: Authentication required for sensitive knowledge
-- **Attribution Requirements**: Proper credit to traditional knowledge holders
-- **Usage Restrictions**: Commercial use requires community consent
+## 🎮 **Demo Features**
 
-### 🤝 **Community Benefits**
-- **Economic Opportunities**: Ecotourism, research partnerships, sustainable development
-- **Cultural Revitalization**: Language preservation, traditional practice support
-- **Conservation Funding**: Direct funding for community-led conservation
-- **Capacity Building**: Training, education, and technology transfer
+### **🌿 Biodiversity Registry**
+```solidity
+// Add species with cultural metadata
+function addSpecies(
+    string memory _id,
+    string memory _scientificName,
+    string memory _tainoName,
+    bool _isEndemic,
+    uint256 _rarity
+) external onlyAuthorized;
 
-## 🌐 Web3 Applications
+// Query species by various criteria
+function getEndemicSpecies() external view returns (string[] memory);
+function getSpeciesByRarity(uint256 _rarity) external view returns (string[] memory);
+```
 
-### 🎨 **NFT Collections**
-- **Endemic Species Collections**: Rare and unique biodiversity NFTs
-- **Conservation Impact NFTs**: Tokens representing real conservation actions
-- **Traditional Knowledge NFTs**: Respectful sharing of cultural wisdom
-- **Ecosystem Service NFTs**: Tokens for carbon sequestration, water purification
+### **🦜 NFT Collection**
+```solidity
+// Mint NFTs with dynamic metadata
+function mintSpecies(...) external payable;
 
-### 🏛️ **DAO Governance**
-- **Conservation Decisions**: Community voting on protection priorities
-- **Funding Allocation**: Transparent resource distribution
-- **Research Priorities**: Democratic selection of research focus
-- **Traditional Knowledge Protocols**: Community-controlled access rules
+// Generate on-chain SVG art
+function tokenURI(uint256 tokenId) public view override returns (string memory);
 
-### 💰 **Token Economy**
-- **Conservation Rewards**: Tokens for protection activities
-- **Knowledge Royalties**: Compensation for traditional wisdom sharing
-- **Ecosystem Services**: Payments for natural resource maintenance
-- **Governance Participation**: Voting rights and decision-making power
+// Automatic revenue distribution
+function _distributePayment(uint256 amount) internal;
+```
 
-## 🔬 Research Applications
+### **🗳️ Mini DAO**
+```solidity
+// Community governance
+function createProposal(string memory species, ...) external onlyMembers;
+function vote(uint256 proposalId) external onlyMembers;
+function executeProposal(uint256 proposalId) external;
+```
 
-### 📊 **Biodiversity Studies**
-- Comprehensive species inventories and distributions
-- Endemic species evolution and conservation genetics
-- Ecosystem function and service quantification
-- Climate change impact assessment and adaptation
+## 💰 **Revenue Model & Tokenomics**
 
-### 🧬 **Biotechnology Development**
-- Medicinal compound discovery from traditional plants
-- Novel enzyme discovery from endemic microorganisms
-- Biomimicry applications from unique species adaptations
-- Sustainable biotechnology from traditional knowledge
+```
+Revenue Distribution (All Contracts):
+├── 70% → haaz.eth (creator/developer)
+└── 30% → bakine.studio (development fund)
 
-### 🌍 **Conservation Science**
-- Population viability analysis for threatened species
-- Habitat restoration effectiveness monitoring
-- Community-based conservation evaluation
-- Traditional ecological knowledge validation
+Revenue Sources:
+├── NFT minting fees (0.005 ETH base price)
+├── DAO membership fees (0.001 ETH minimum)
+├── Direct project support donations
+└── Future game integration revenue
+```
 
-## 🤝 Contributing
+## 🔧 **Development Workflow**
 
-### 📝 **How to Contribute**
-1. **Respect Cultural Protocols**: Always follow FPIC and attribution requirements
-2. **Submit Quality Data**: Peer-reviewed or community-validated information
-3. **Include Cultural Context**: Traditional knowledge and cultural significance
-4. **Follow Documentation Standards**: Use established templates and formats
+### **Available Scripts**
+```bash
+npm run compile          # Compile all contracts
+npm run test            # Run test suite (when implemented)
+npm run deploy:sepolia  # Deploy to Base Sepolia
+npm run deploy:base     # Deploy to Base mainnet
+npm run verify          # Verify contracts on BaseScan
+npm run node           # Start local Hardhat node
+npm run clean          # Clean artifacts and cache
+```
 
-### 👥 **Community Guidelines**
-- Honor Indigenous knowledge and cultural values
-- Support community benefit-sharing and ownership
-- Maintain scientific accuracy and cultural sensitivity
-- Collaborate respectfully with knowledge holders
+### **Project Structure**
+```
+borikua-biodiversity-portfolio/
+├── contracts/           # Smart contracts
+├── scripts/deploy/      # Deployment scripts
+├── test/               # Test files (ready for implementation)
+├── deployments/        # Deployment records
+├── docs/              # Technical documentation
+├── hardhat.config.js  # Hardhat configuration
+└── package.json       # Dependencies and scripts
+```
 
-### 🔄 **Contribution Process**
-1. Fork the repository
-2. Create feature branch with descriptive name
-3. Add data following cultural protocols
-4. Include proper attribution and sources
-5. Submit pull request with detailed description
+## 🌟 **For Employers & Clients**
 
-## 🎓 Educational Use
+### **Why This Portfolio Matters**
+1. **Real-World Application** - Beyond toy contracts, demonstrates practical use case
+2. **Base Ecosystem Focus** - Shows commitment to L2 development and Base specifically
+3. **Cultural Sensitivity** - Respectful handling of Indigenous knowledge and data
+4. **Production Ready** - Professional standards, security, and deployment practices
+5. **Revenue Generation** - Demonstrates understanding of tokenomics and business models
 
-### 🏫 **For Educators**
-- **Curriculum Integration**: Biodiversity, conservation, and cultural studies
-- **Interdisciplinary Learning**: Science, technology, culture, and ethics
-- **Community Connections**: Local knowledge and global conservation
-- **Technology Skills**: Web3, APIs, and digital literacy
+### **Technical Competencies**
+- Smart contract architecture and design patterns
+- Gas optimization and L2-specific considerations
+- Integration with external systems and APIs (ready)
+- Professional development workflow and tooling
+- Security best practices and access control
+- Event-driven programming for dApps
 
-### 👨‍💻 **For Students**
-- **Coding Projects**: Build apps using biodiversity APIs
-- **Research Projects**: Investigate endemic species and conservation
-- **Cultural Studies**: Explore traditional ecological knowledge
-- **Conservation Action**: Participate in citizen science and advocacy
+## 🎯 **Roadmap & Extensions**
 
-### 👩‍🔬 **For Scientists**
-- **Data Resources**: Comprehensive biodiversity databases
-- **Collaboration Opportunities**: Community-based research partnerships
-- **Traditional Knowledge**: Validated indigenous wisdom for research
-- **Technology Tools**: APIs, databases, and analysis platforms
+### **Phase 1: Portfolio Demo** ✅
+- Three-contract system deployment
+- Base Sepolia testing and verification
+- Professional documentation
 
-## 📈 Impact Metrics
+### **Phase 2: Production Enhancement**
+- Comprehensive test suite
+- Frontend integration (React/Next.js)
+- IPFS metadata storage
+- Contract upgradeability
 
-### 🌱 **Conservation Outcomes**
-- Species population recovery rates
-- Habitat restoration hectares
-- Community conservation capacity
-- Traditional knowledge preservation
+### **Phase 3: Ecosystem Integration**
+- Puerto Rico ecology game integration
+- Partnership with conservation organizations
+- Advanced DAO features and governance tokens
+- Mainnet deployment and real revenue
 
-### 🤝 **Community Benefits**
-- Economic opportunities created
-- Cultural practices supported
-- Education and capacity building
-- Traditional knowledge recognition
+## 📚 **Documentation**
 
-### 💻 **Technology Adoption**
-- Developer community growth
-- API usage and integration
-- Web3 application development
-- Conservation technology innovation
+- [Deployment Guide](./docs/deployment-guide.md)
+- [API Reference](./docs/api-reference.md)
+- [Security Considerations](./docs/security.md)
+- [Cultural Protocol](./docs/cultural-protocol.md)
 
-## 🔮 Future Directions
+## 🤝 **Professional Contact**
 
-### 🧬 **Scientific Expansion**
-- Environmental DNA (eDNA) species detection
-- Genomic diversity assessment
-- Ecosystem service quantification
-- Climate adaptation modeling
+- **Developer:** haaz.eth
+- **Studio:** [bakine.studio](https://bakine.studio)
+- **Base Profile:** [View on Base](https://base.org)
+- **Network:** Base Ecosystem Developer
 
-### 🌐 **Technology Evolution**
-- AI-powered species identification
-- Virtual reality ecosystem experiences
-- Augmented reality educational tools
-- Blockchain conservation verification
+## 📄 **License**
 
-### 🏛️ **Cultural Development**
-- Traditional knowledge digital archives
-- Community-controlled databases
-- Cultural protocol automation
-- Indigenous language integration
-
-### 🤝 **Partnership Growth**
-- International collaboration networks
-- Indigenous community partnerships
-- Technology company collaborations
-- Conservation organization alliances
-
-## 📄 License and Attribution
-
-### 📋 **Data License**
-- **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**
-- **Traditional Knowledge**: Requires specific community permissions
-- **Commercial Use**: Requires community benefit-sharing agreements
-- **Attribution**: Must credit traditional knowledge holders
-
-### 🏛️ **Cultural Acknowledgment**
-> This knowledge base is built upon the traditional ecological wisdom of the Taíno people and the continuing stewardship of Boricua communities. All use of this knowledge must respect Indigenous data sovereignty, implement benefit-sharing mechanisms, and follow cultural protocols established by the communities who hold this knowledge.
-
-### 🤝 **Community Partnership**
-We acknowledge that this knowledge belongs to the Indigenous peoples of Borikén and their descendants. This repository serves as a bridge between traditional wisdom and modern technology, designed to support both conservation goals and community self-determination.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📞 Contact and Support
+**Built with ❤️ for Borikén biodiversity and the Base ecosystem**
 
-### 🌐 **Community Channels**
-- **Discord**: [Boricua Biodiversity Builders](https://discord.gg/boricua-bio)
-- **Telegram**: [@BoricuaBiodiversity](https://t.me/BoricuaBiodiversity)
-- **GitHub Discussions**: [Community Forum](https://github.com/your-org/discussions)
-
-### 📧 **Direct Contact**
-- **Technical Support**: `tech@boricua-biodiversity.org`
-- **Cultural Protocols**: `culture@boricua-biodiversity.org`
-- **Community Relations**: `community@boricua-biodiversity.org`
-- **Research Partnerships**: `research@boricua-biodiversity.org`
-
-### 🆘 **Getting Help**
-- Check the [IDE Integration Guide](./IDE_INTEGRATION_GUIDE.md) for setup help
-- Browse [GitHub Discussions](https://github.com/your-org/discussions) for community support
-- Review cultural protocols before using traditional knowledge
-- Contact community liaisons for partnership opportunities
-
----
-
-**¡Wepa! Welcome to the future of biodiversity conservation with cultural respect and technological innovation! 🌺🐸🦜**
-
-*Built with love for Borikén, respect for traditional knowledge, and hope for a sustainable future.* 
+*Demonstrating professional web3 development through meaningful ecological data preservation* 
