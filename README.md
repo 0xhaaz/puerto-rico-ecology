@@ -1,82 +1,128 @@
-# Puerto Rican Ecology & Coqui Research
+# Borikén Biodiversity Smart Contracts 🌿
 
-A comprehensive knowledge base for Puerto Rican biodiversity, ecosystems, and the iconic Coqui frog. This repository serves as a research foundation for educational games and conservation awareness projects.
+> **Professional Base Ecosystem Portfolio by haaz.eth**
 
-## 🐸 Coqui (Eleutherodactylus spp.)
+[![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue.svg)](https://soliditylang.org/)
+[![Hardhat](https://img.shields.io/badge/Framework-Hardhat-orange.svg)](https://hardhat.org/)
+[![Base](https://img.shields.io/badge/Network-Base%20Sepolia-blue.svg)](https://base.org/)
 
-The Coqui is Puerto Rico's national symbol and most recognizable amphibian. These small tree frogs are endemic to Puerto Rico and play crucial roles in the island's ecosystems.
+**Developer:** [haaz.eth](https://base.org) | **Revenue:** [bakine.studio](https://bakine.studio)
 
-### Key Game-Relevant Features:
-- **Vocalizations**: Distinct "co-kee" call (hence the name)
-- **Habitat Diversity**: From rainforests to urban areas
-- **Behavioral Patterns**: Nocturnal, territorial, seasonal breeding
-- **Visual Characteristics**: Various colors and patterns by species
-- **Ecological Role**: Insect control, indicator species
+## 🎯 Overview
 
-## 📁 Repository Structure
+Professional smart contract system demonstrating Puerto Rico biodiversity data management with:
+
+- **Multi-contract architecture** (Registry, NFT, DAO)
+- **Revenue distribution** (70% creator, 30% bakine.studio)
+- **Cultural data preservation** with technical innovation
+- **Production-ready** deployment practices
+
+## 📋 Live Contracts (Base Sepolia)
+
+| Contract | Purpose | Address |
+|----------|---------|---------|
+| 🌿 **BiodiversityRegistry** | Species database | `[Deploy with npm run deploy:sepolia]` |
+| 🦜 **BoricuaSpeciesNFT** | NFT collection | `[Deploy with npm run deploy:sepolia]` |
+| 🗳️ **EcologyMiniDAO** | Governance system | `[Deploy with npm run deploy:sepolia]` |
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 16+
+- Base Sepolia testnet ETH ([Get from faucet](https://faucets.chain.link/base-sepolia))
+
+### Installation & Deployment
+```bash
+git clone https://github.com/yourusername/borikua-biodiversity-portfolio
+cd borikua-biodiversity-portfolio
+npm install
+
+# Set up environment
+cp .env.example .env
+# Add your PRIVATE_KEY (without 0x prefix)
+
+# Deploy to Base Sepolia (FREE)
+npm run deploy:sepolia
+```
+
+## 🏗️ Technical Architecture
+
+### Smart Contracts
+```
+contracts/
+├── BiodiversityRegistryDemo.sol    # Species data management
+├── BoricuaSpeciesNFT.sol          # ERC-721 with SVG metadata
+└── EcologyMiniDAO.sol             # Governance & voting
+```
+
+### Key Features
+- ✅ **Gas Optimized** - IR compilation, efficient storage
+- ✅ **OpenZeppelin v5** - Latest security standards
+- ✅ **Revenue Distribution** - Automated payment splitting
+- ✅ **Access Control** - Role-based permissions
+- ✅ **Cultural Respectful** - Indigenous data protocols
+
+## 💼 Professional Skills Demonstrated
+
+- **Smart Contract Development** - Solidity 0.8.20+, OpenZeppelin v5
+- **Base Ecosystem** - L2 deployment, BaseScan integration
+- **Production Practices** - Testing, deployment scripts, documentation
+- **Business Logic** - Revenue systems, governance, NFT metadata
+- **Security** - Access control, input validation, reentrancy protection
+
+## 💰 Revenue Model
 
 ```
-puerto-rico-ecology/
-├── README.md                 # This file
-├── data/
-│   ├── coqui/               # Coqui-specific research
-│   │   ├── species.md       # Different Coqui species
-│   │   ├── habitat.md       # Habitat requirements
-│   │   ├── behavior.md      # Behavioral patterns
-│   │   ├── sounds.md        # Vocalizations and audio
-│   │   └── lifecycle.md     # Reproduction and development
-│   ├── ecosystems/          # Puerto Rican ecosystems
-│   │   ├── rainforest.md    # El Yunque and other forests
-│   │   ├── coastal.md       # Coastal and mangrove systems
-│   │   └── urban.md         # Urban ecology
-│   └── biodiversity/        # Broader biodiversity
-│       ├── flora.md         # Native plants
-│       ├── fauna.md         # Other animals
-│       └── conservation.md  # Conservation status
-├── assets/
-│   ├── sounds/             # Audio files (Coqui calls)
-│   ├── images/             # Reference images
-│   └── game-assets/        # Game-ready assets
-└── references/             # Academic sources and citations
+All contract revenue splits automatically:
+├── 70% → haaz.eth (creator/developer)
+└── 30% → bakine.studio (development fund)
+
+Revenue sources:
+├── NFT minting (0.005 ETH)
+├── DAO membership (0.001 ETH)
+└── Direct donations
 ```
 
-## 🎮 Game Development Context
+## 🔧 Development Commands
 
-This repository provides authentic, research-backed content for:
-- **Educational Games**: Teaching about Puerto Rican ecology
-- **Conservation Awareness**: Highlighting environmental challenges
-- **Cultural Connection**: Celebrating Puerto Rican biodiversity
-- **Scientific Accuracy**: Ensuring factual game content
+```bash
+npm run compile         # Compile contracts
+npm run test           # Run test suite
+npm run deploy:sepolia # Deploy to Base Sepolia
+npm run deploy:base    # Deploy to Base mainnet
+npm run verify         # Verify on BaseScan
+```
 
-## 🔬 Research Sources
+## 📁 Project Structure
 
-All content is sourced from:
-- Academic journals and research papers
-- Government wildlife agencies
-- Conservation organizations
-- Field research and observations
-- Indigenous knowledge and cultural sources
+```
+borikua-biodiversity-portfolio/
+├── contracts/          # Smart contracts
+├── scripts/deploy/     # Deployment scripts
+├── test/              # Test files
+├── hardhat.config.js  # Hardhat configuration
+└── package.json       # Dependencies
+```
 
-## 📚 Quick Start
+## 🌟 For Employers
 
-1. **For Coqui-focused games**: Start with `data/coqui/`
-2. **For ecosystem games**: Explore `data/ecosystems/`
-3. **For biodiversity games**: Check `data/biodiversity/`
-4. **For audio assets**: See `assets/sounds/`
+**Why This Portfolio Matters:**
+1. **Real Application** - Beyond toy contracts, practical biodiversity use case
+2. **Base Focus** - L2 expertise and ecosystem commitment
+3. **Production Ready** - Professional standards and deployment practices
+4. **Cultural Innovation** - Respectful Indigenous data preservation
+5. **Revenue Generation** - Working tokenomics and business model
 
-## 🤝 Contributing
+## 🤝 Contact
 
-This is a living document. Contributions are welcome for:
-- Additional research findings
-- Audio recordings of Coqui calls
-- Photographs and visual references
-- Cultural context and stories
-- Conservation updates
+- **Developer:** haaz.eth
+- **Studio:** [bakine.studio](https://bakine.studio)
+- **Network:** Base Ecosystem
 
 ## 📄 License
 
-This content is provided for educational and conservation purposes. Please cite sources when using this information.
+MIT License - see [LICENSE](LICENSE) file.
 
 ---
 
-*"El Coqui es el alma de Puerto Rico"* - The Coqui is the soul of Puerto Rico 
+**Built with ❤️ for Borikén biodiversity and the Base ecosystem** 

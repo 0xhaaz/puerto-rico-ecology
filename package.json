@@ -1,0 +1,59 @@
+{
+  "name": "borikua-biodiversity-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio demonstration: Biodiversity DAO & NFT system for Puerto Rico ecology by haaz.eth",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:sepolia": "hardhat run scripts/deploy/01-deploy-base-sepolia.js --network baseSepolia",
+    "deploy:base": "hardhat run scripts/deploy/01-deploy-base-sepolia.js --network base",
+    "verify": "hardhat verify --network baseSepolia",
+    "node": "hardhat node",
+    "clean": "hardhat clean",
+    "size": "hardhat size-contracts",
+    "coverage": "hardhat coverage",
+    "gas-report": "REPORT_GAS=true hardhat test"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "base",
+    "nft",
+    "dao",
+    "biodiversity",
+    "puerto-rico",
+    "portfolio",
+    "web3"
+  ],
+  "author": "haaz.eth",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "chai": "^4.2.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.1",
+    "typechain": "^8.3.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/borikua-biodiversity-portfolio"
+  },
+  "homepage": "https://bakine.studio",
+  "funding": {
+    "type": "individual",
+    "url": "https://bakine.studio"
+  }
+}
