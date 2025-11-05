@@ -1,0 +1,580 @@
+{
+  "boricua_invertebrate_biodiversity": {
+    "metadata": {
+      "version": "1.0.0",
+      "last_updated": "2025-11-05",
+      "total_invertebrate_species": "5000+",
+      "described_species": "~3500",
+      "undescribed_estimate": "1500+",
+      "note": "Invertebrates represent the HIGHEST biodiversity in Puerto Rico - more species than all other groups combined",
+      "data_completeness": "partial - many species still undiscovered or unstudied",
+      "major_groups": ["insects", "arachnids", "mollusks", "crustaceans", "marine_invertebrates"],
+      "endemic_percentage": "~15-20% (estimated)",
+      "conservation_concern": "Many species declining, habitat loss primary threat",
+      "data_license": "CC BY-SA 4.0"
+    },
+    "insects": {
+      "total_species": "3000+",
+      "families": "100+",
+      "endemic_species": "200+",
+      "note": "Most diverse group in Puerto Rico, many species undescribed",
+      "major_orders": {
+        "coleoptera": {
+          "common_name": "Beetles",
+          "species_count": "800+",
+          "endemic_count": "60+",
+          "ecological_roles": ["decomposers", "pollinators", "herbivores", "predators"],
+          "featured_species": [
+            {
+              "id": "beetle_001",
+              "scientific_name": "Phyllophaga portoricensis",
+              "common_name": "Puerto Rican June Beetle",
+              "endemic_status": "endemic",
+              "conservation_status": "stable",
+              "habitat": ["forests", "agricultural_areas"],
+              "life_cycle": "larvae_in_soil_adults_nocturnal",
+              "ecological_role": ["soil_aeration", "nutrient_cycling"],
+              "cultural_significance": "medium"
+            },
+            {
+              "id": "beetle_002",
+              "scientific_name": "Lachnopus curvipes",
+              "common_name": "Puerto Rican Weevil",
+              "endemic_status": "endemic",
+              "conservation_status": "stable",
+              "habitat": ["dry_forest", "wet_forest"],
+              "special_note": "Flightless, forest dependent",
+              "threats": ["habitat_loss", "hurricanes"]
+            }
+          ]
+        },
+        "lepidoptera": {
+          "common_name": "Butterflies and Moths",
+          "species_count": "400+",
+          "endemic_count": "30+",
+          "ecological_roles": ["pollinators", "herbivores", "prey_for_birds_and_bats"],
+          "featured_species": [
+            {
+              "id": "lepidoptera_001",
+              "scientific_name": "Atlantea tulita",
+              "common_name": "Puerto Rican Crescent",
+              "endemic_status": "endemic",
+              "conservation_status": "vulnerable",
+              "habitat": ["forests"],
+              "host_plants": ["native_composites"],
+              "adult_food": ["flower_nectar"],
+              "cultural_significance": "medium",
+              "threats": ["habitat_loss", "invasive_plants"]
+            },
+            {
+              "id": "lepidoptera_002",
+              "scientific_name": "Papilio pelaus",
+              "common_name": "Antillean Swallowtail",
+              "endemic_status": "caribbean_endemic",
+              "conservation_status": "stable",
+              "habitat": ["forests", "gardens"],
+              "adult_food": ["flower_nectar"],
+              "larval_host": ["citrus", "rue_family"],
+              "cultural_significance": "high"
+            },
+            {
+              "id": "lepidoptera_003",
+              "scientific_name": "Urania boisduvalii",
+              "common_name": "Urania Moth",
+              "endemic_status": "caribbean",
+              "conservation_status": "stable",
+              "habitat": ["forests"],
+              "note": "Day-flying moth, often mistaken for butterfly",
+              "coloration": "iridescent_green_and_black",
+              "cultural_significance": "high"
+            }
+          ]
+        },
+        "hymenoptera": {
+          "common_name": "Bees, Wasps, Ants",
+          "species_count": "500+",
+          "endemic_count": "40+",
+          "ecological_roles": ["pollinators", "predators", "decomposers", "soil_engineers"],
+          "featured_species": [
+            {
+              "id": "hymenoptera_001",
+              "scientific_name": "Camponotus taino",
+              "common_name": "Taíno Ant",
+              "endemic_status": "endemic",
+              "conservation_status": "stable",
+              "habitat": ["forests"],
+              "ecosystem_role": ["soil_aeration", "seed_dispersal", "forest_health"],
+              "cultural_significance": "very_high",
+              "naming": "Named after Taíno people",
+              "colony_size": "moderate",
+              "web3_metadata": {
+                "unique_traits": ["named_after_taino", "endemic", "ecosystem_engineer"],
+                "rarity_score": 75,
+                "cultural_value": 90,
+                "ecological_value": 80
+              }
+            },
+            {
+              "id": "hymenoptera_002",
+              "scientific_name": "Apis mellifera",
+              "common_name": "European Honey Bee",
+              "endemic_status": "introduced",
+              "conservation_status": "stable",
+              "habitat": ["ubiquitous"],
+              "ecosystem_role": ["pollination_of_crops_and_wildflowers"],
+              "note": "Not native but important agricultural pollinator",
+              "concerns": ["may_compete_with_native_bees"]
+            },
+            {
+              "id": "hymenoptera_003",
+              "scientific_name": "Solenopsis invicta",
+              "common_name": "Red Imported Fire Ant",
+              "endemic_status": "invasive",
+              "conservation_status": "invasive_pest",
+              "habitat": ["disturbed_areas", "urban", "agricultural"],
+              "ecological_impact": "negative - displaces native ants, painful stings",
+              "management": "control_programs_in_sensitive_areas"
+            }
+          ],
+          "native_bees": {
+            "diversity": "numerous_native_species",
+            "importance": "critical_pollinators_of_native_plants",
+            "threats": ["habitat_loss", "pesticides", "competition_from_honeybees"],
+            "conservation_need": "high_but_understudied"
+          }
+        },
+        "odonata": {
+          "common_name": "Dragonflies and Damselflies",
+          "species_count": "50+",
+          "endemic_count": "8+",
+          "ecological_roles": ["predators_of_mosquitoes", "aquatic_indicators"],
+          "featured_species": [
+            {
+              "id": "odonata_001",
+              "scientific_name": "Macrothemis celeno",
+              "common_name": "Celeno Dragonfly",
+              "endemic_status": "caribbean",
+              "conservation_status": "stable",
+              "habitat": ["ponds", "streams", "wetlands"],
+              "life_cycle": "aquatic_larvae_aerial_adults",
+              "ecological_role": ["mosquito_control", "aquatic_predator"],
+              "cultural_significance": "medium"
+            }
+          ],
+          "conservation_importance": "Indicators of freshwater ecosystem health"
+        },
+        "orthoptera": {
+          "common_name": "Grasshoppers, Crickets, Katydids",
+          "species_count": "100+",
+          "endemic_count": "15+",
+          "ecological_roles": ["herbivores", "prey", "soundscape"],
+          "featured_species": [
+            {
+              "id": "orthoptera_001",
+              "scientific_name": "Conocephalus cinereus",
+              "common_name": "Gray Conehead",
+              "endemic_status": "native",
+              "conservation_status": "stable",
+              "habitat": ["grasslands", "wetlands"],
+              "sound": "nocturnal_singer",
+              "ecological_role": ["herbivore", "prey_for_birds"]
+            }
+          ]
+        },
+        "hemiptera": {
+          "common_name": "True Bugs (Cicadas, Aphids, etc.)",
+          "species_count": "300+",
+          "endemic_count": "25+",
+          "ecological_roles": ["herbivores", "predators", "decomposers"],
+          "note": "Includes agricultural pests and beneficial predators"
+        },
+        "diptera": {
+          "common_name": "Flies and Mosquitoes",
+          "species_count": "500+",
+          "endemic_count": "40+",
+          "ecological_roles": ["pollinators", "decomposers", "disease_vectors", "prey"],
+          "note": "Critical decomposers and pollinators, some disease vectors"
+        }
+      }
+    },
+    "arachnids": {
+      "total_species": "200+",
+      "endemic_species": "50+",
+      "major_groups": ["spiders", "scorpions", "harvestmen", "mites"],
+      "spiders": {
+        "species_count": "150+",
+        "endemic_count": "40+",
+        "ecological_roles": ["predators", "pest_control"],
+        "featured_species": [
+          {
+            "id": "spider_001",
+            "scientific_name": "Argiope argentata",
+            "common_name": "Silver Garden Spider",
+            "endemic_status": "widespread_neotropics",
+            "conservation_status": "stable",
+            "habitat": ["gardens", "fields", "forest_edges"],
+            "web_type": "orb_web_with_zigzag_stabilimentum",
+            "ecological_role": ["insect_predator", "pest_control"],
+            "cultural_significance": "medium",
+            "note": "Large, conspicuous spider, beneficial for gardens"
+          },
+          {
+            "id": "spider_002",
+            "scientific_name": "Selenops insularis",
+            "common_name": "Wall Spider",
+            "endemic_status": "caribbean",
+            "conservation_status": "stable",
+            "habitat": ["buildings", "caves", "tree_bark"],
+            "web_type": "none_active_hunter",
+            "ecological_role": ["cockroach_and_insect_predator"],
+            "cultural_significance": "medium",
+            "note": "Flattened body, often found in homes, beneficial"
+          }
+        ]
+      },
+      "scorpions": {
+        "species_count": "2",
+        "endemic_count": "0",
+        "featured_species": [
+          {
+            "id": "scorpion_001",
+            "scientific_name": "Centruroides griseus",
+            "common_name": "Bark Scorpion",
+            "endemic_status": "caribbean",
+            "conservation_status": "stable",
+            "habitat": ["under_bark", "rocks", "buildings"],
+            "venom": "mildly_toxic_painful_but_not_dangerous",
+            "ecological_role": ["predator_of_insects"],
+            "cultural_significance": "low",
+            "note": "Only scorpion species in Puerto Rico"
+          }
+        ]
+      }
+    },
+    "mollusks": {
+      "terrestrial_species": "100+",
+      "marine_species": "500+",
+      "endemic_terrestrial": "30+",
+      "ecological_roles": ["decomposers", "herbivores", "filter_feeders", "prey"],
+      "land_snails": {
+        "species_count": "100+",
+        "endemic_count": "30+",
+        "note": "High endemism, many species restricted to specific areas",
+        "conservation_status": "many_species_rare_or_declining",
+        "threats": ["habitat_loss", "invasive_species", "climate_change"],
+        "featured_species": [
+          {
+            "id": "snail_001",
+            "scientific_name": "Cerion marmoratum",
+            "common_name": "Marble Cerion",
+            "endemic_status": "endemic",
+            "conservation_status": "vulnerable",
+            "habitat": ["coastal_dry_scrub"],
+            "distribution": "limited_coastal_areas",
+            "threats": ["habitat_loss", "development", "climate_change"],
+            "cultural_significance": "low",
+            "scientific_value": "high_for_evolution_studies"
+          }
+        ]
+      },
+      "marine_mollusks": {
+        "species_count": "500+",
+        "endemic_count": "low",
+        "major_groups": ["gastropods", "bivalves", "cephalopods"],
+        "featured_species": [
+          {
+            "id": "marine_mollusk_001",
+            "scientific_name": "Lobatus gigas",
+            "common_name": "Queen Conch",
+            "endemic_status": "caribbean",
+            "conservation_status": "vulnerable_overharvested",
+            "habitat": ["seagrass_beds", "coral_reefs"],
+            "ecological_role": ["herbivore", "sand_production"],
+            "economic_value": "traditionally_important_fishery",
+            "status_pr": "rare_due_to_overfishing",
+            "cultural_significance": "very_high",
+            "traditional_uses": ["food", "shells_for_tools_and_horns"],
+            "conservation_need": "critical_population_recovery_needed"
+          },
+          {
+            "id": "marine_mollusk_002",
+            "scientific_name": "Octopus vulgaris",
+            "common_name": "Common Octopus",
+            "endemic_status": "widespread",
+            "conservation_status": "stable_but_harvested",
+            "habitat": ["reefs", "rocky_areas"],
+            "ecological_role": ["predator", "intelligent_hunter"],
+            "economic_value": "commercial_and_recreational_fishery",
+            "cultural_significance": "high"
+          }
+        ]
+      },
+      "freshwater_mollusks": {
+        "species_count": "10+",
+        "endemic_count": "2+",
+        "conservation_status": "highly_threatened_group",
+        "threats": ["water_pollution", "habitat_modification", "invasive_species"]
+      }
+    },
+    "crustaceans": {
+      "terrestrial_species": "50+",
+      "marine_species": "300+",
+      "freshwater_species": "20+",
+      "endemic_count": "15+",
+      "land_crabs": {
+        "species_count": "10+",
+        "ecological_roles": ["decomposers", "seed_dispersers", "soil_engineers"],
+        "featured_species": [
+          {
+            "id": "crab_001",
+            "scientific_name": "Gecarcinus ruricola",
+            "common_name": "Black Land Crab / Juey",
+            "endemic_status": "caribbean",
+            "conservation_status": "stable_but_harvested",
+            "habitat": ["forests", "caves", "burrows"],
+            "life_cycle": "terrestrial_but_returns_to_sea_to_breed",
+            "migration": "mass_migrations_to_coast_for_breeding",
+            "ecological_role": ["decomposer", "soil_engineer", "leaf_litter_processor"],
+            "economic_value": "traditional_food_source",
+            "cultural_significance": "very_high",
+            "traditional_name": "Juey",
+            "harvest_season": "traditionally_spring",
+            "conservation_concern": "overharvesting_in_some_areas"
+          },
+          {
+            "id": "crab_002",
+            "scientific_name": "Cardisoma guanhumi",
+            "common_name": "Blue Land Crab / Juey Azul",
+            "endemic_status": "caribbean_and_tropical_americas",
+            "conservation_status": "declining",
+            "habitat": ["coastal_areas", "mangroves", "burrows"],
+            "ecological_role": ["ecosystem_engineer", "mangrove_leaf_processor"],
+            "economic_value": "highly_valued_traditional_food",
+            "cultural_significance": "very_high",
+            "threats": ["overharvesting", "habitat_loss", "road_mortality"],
+            "conservation_need": "population_recovery_and_sustainable_harvest"
+          }
+        ]
+      },
+      "marine_crustaceans": {
+        "species_count": "300+",
+        "commercial_species": "10+",
+        "featured_species": [
+          {
+            "id": "marine_crust_001",
+            "scientific_name": "Panulirus argus",
+            "common_name": "Caribbean Spiny Lobster / Langosta",
+            "endemic_status": "caribbean_and_tropical_atlantic",
+            "conservation_status": "overfished_in_many_areas",
+            "habitat": ["coral_reefs", "rocky_areas"],
+            "life_cycle": "larvae_planktonic_juveniles_in_seagrass",
+            "ecological_role": ["predator", "prey"],
+            "economic_value": "major_commercial_and_recreational_fishery",
+            "cultural_significance": "very_high",
+            "regulations": "size_limits_closed_seasons",
+            "conservation_concern": "declining_populations_need_stronger_management"
+          }
+        ]
+      },
+      "freshwater_crustaceans": {
+        "species_count": "20+",
+        "endemic_count": "5+",
+        "featured_species": [
+          {
+            "id": "freshwater_crust_001",
+            "scientific_name": "Atya lanipes",
+            "common_name": "Camerón / Mountain Shrimp",
+            "endemic_status": "caribbean",
+            "conservation_status": "declining",
+            "habitat": ["mountain_streams", "rivers"],
+            "ecological_role": ["filter_feeder", "water_quality_indicator"],
+            "traditional_use": "food_source_in_rural_areas",
+            "cultural_significance": "high",
+            "threats": ["water_pollution", "dam_construction", "overharvesting"],
+            "conservation_need": "critical_clean_water_and_population_recovery"
+          }
+        ]
+      }
+    },
+    "marine_invertebrates": {
+      "note": "Extremely diverse group in Puerto Rico's marine ecosystems",
+      "total_species": "1000+",
+      "major_phyla": ["cnidaria", "echinodermata", "porifera", "annelida"],
+      "cnidaria": {
+        "common_name": "Corals, Jellyfish, Anemones",
+        "species_count": "150+",
+        "coral_species": "40+",
+        "featured_species": [
+          {
+            "id": "coral_001",
+            "scientific_name": "Acropora palmata",
+            "common_name": "Elkhorn Coral",
+            "conservation_status": "critically_endangered",
+            "habitat": ["shallow_reef_crests"],
+            "ecological_role": ["reef_building", "storm_protection", "fish_habitat"],
+            "threats": ["climate_change", "disease", "hurricanes", "pollution"],
+            "conservation_2025": "NOAA_restoration_efforts_underway",
+            "cultural_significance": "high",
+            "ecosystem_value": "critical_for_reef_structure",
+            "web3_metadata": {
+              "unique_traits": ["reef_builder", "critically_endangered", "storm_protection"],
+              "rarity_score": 100,
+              "cultural_value": 85,
+              "ecological_value": 100
+            }
+          },
+          {
+            "id": "coral_002",
+            "scientific_name": "Acropora cervicornis",
+            "common_name": "Staghorn Coral",
+            "conservation_status": "critically_endangered",
+            "habitat": ["mid_depth_reefs"],
+            "ecological_role": ["reef_building", "fish_habitat", "three_dimensional_structure"],
+            "threats": ["climate_change", "disease", "hurricanes", "physical_damage"],
+            "conservation_2025": "active_restoration_programs",
+            "ecosystem_value": "provides_critical_habitat_structure"
+          },
+          {
+            "id": "coral_003",
+            "scientific_name": "Orbicella faveolata",
+            "common_name": "Mountainous Star Coral",
+            "conservation_status": "endangered",
+            "habitat": ["various_reef_depths"],
+            "ecological_role": ["reef_building", "long_lived_colonies"],
+            "age": "colonies_can_live_hundreds_of_years",
+            "threats": ["climate_change", "disease", "ocean_acidification"],
+            "importance": "historically_dominant_reef_builder"
+          }
+        ]
+      },
+      "echinodermata": {
+        "common_name": "Sea Urchins, Sea Stars, Sea Cucumbers",
+        "species_count": "80+",
+        "featured_species": [
+          {
+            "id": "echinoderm_001",
+            "scientific_name": "Diadema antillarum",
+            "common_name": "Long-Spined Sea Urchin / Erizo",
+            "endemic_status": "caribbean",
+            "conservation_status": "recovering_from_die_off",
+            "habitat": ["coral_reefs", "rocky_areas"],
+            "ecological_role": ["herbivore_controls_algae", "critical_for_reef_health"],
+            "history": "mass_die_off_1983_devastated_populations",
+            "current_status_2025": "slow_recovery_in_some_areas",
+            "importance": "essential_for_controlling_algae_on_reefs",
+            "cultural_significance": "medium"
+          },
+          {
+            "id": "echinoderm_002",
+            "scientific_name": "Tripneustes ventricosus",
+            "common_name": "West Indian Sea Egg",
+            "endemic_status": "caribbean",
+            "conservation_status": "stable_but_harvested",
+            "habitat": ["seagrass_beds", "reefs"],
+            "ecological_role": ["herbivore"],
+            "traditional_use": "roe_eaten_as_delicacy",
+            "cultural_significance": "high",
+            "harvest_regulation": "needed_for_sustainability"
+          }
+        ]
+      },
+      "porifera": {
+        "common_name": "Sponges",
+        "species_count": "200+",
+        "ecological_roles": ["filter_feeders", "habitat", "chemical_defense_research"],
+        "importance": "filter_vast_amounts_of_water_reef_health",
+        "pharmaceutical_interest": "compounds_for_drug_development"
+      }
+    },
+    "other_invertebrates": {
+      "annelids": {
+        "common_name": "Segmented Worms",
+        "species_count": "100+",
+        "marine_polychaetes": "abundant_and_diverse",
+        "terrestrial_earthworms": "important_soil_organisms",
+        "ecological_roles": ["decomposers", "soil_formation", "filter_feeders"]
+      },
+      "nematodes": {
+        "common_name": "Roundworms",
+        "species_count": "1000+ estimated",
+        "note": "extremely_diverse_but_largely_unstudied",
+        "ecological_roles": ["decomposers", "parasites", "soil_health"]
+      },
+      "flatworms": {
+        "species_count": "50+",
+        "marine_and_freshwater": "diverse_but_understudied"
+      }
+    },
+    "conservation_status_summary": {
+      "critically_endangered": ["Elkhorn Coral", "Staghorn Coral", "several endemic land snails"],
+      "endangered": ["Mountainous Star Coral", "several land snail species"],
+      "vulnerable": ["Queen Conch", "Blue Land Crab", "many endemic species"],
+      "declining": ["freshwater crustaceans", "many reef invertebrates", "specialized forest invertebrates"],
+      "invasive": ["Red Imported Fire Ant", "several invasive snails"]
+    },
+    "major_threats_2025": {
+      "habitat_loss": "deforestation, coastal development, wetland loss",
+      "climate_change": "coral bleaching, ocean acidification, temperature stress, sea level rise",
+      "pollution": "pesticides, water contamination, marine debris",
+      "overharvesting": "lobster, conch, land crabs, sea urchins overfished",
+      "invasive_species": "fire ants, invasive snails competing with natives",
+      "hurricanes": "physical damage, population losses, especially for endemic species",
+      "disease": "coral diseases (SCTLD), other pathogens"
+    },
+    "ecosystem_services": {
+      "pollination": "bees, butterflies, moths, flies essential for plant reproduction",
+      "pest_control": "spiders, predatory insects, bats eating millions of insects",
+      "decomposition": "beetles, flies, earthworms, land crabs breaking down organic matter",
+      "soil_health": "earthworms, ants, termites aerating and enriching soil",
+      "reef_building": "corals creating structure for entire ecosystems",
+      "water_filtration": "sponges, bivalves filtering water",
+      "food_web_support": "invertebrates as prey for fish, birds, mammals, other wildlife",
+      "nutrient_cycling": "critical for all ecosystems"
+    },
+    "research_priorities_2025": {
+      "urgent": [
+        "Complete species inventories (many species still unknown)",
+        "Assess conservation status of poorly-known species",
+        "Document endemic species distributions",
+        "Study climate change impacts on invertebrates",
+        "Monitor coral reef health and restoration success",
+        "Assess invasive species impacts"
+      ],
+      "high": [
+        "Understand pollinator diversity and health",
+        "Study freshwater invertebrate conservation",
+        "Document traditional knowledge of invertebrate uses",
+        "Establish long-term monitoring programs",
+        "Assess pesticide impacts on native invertebrates"
+      ]
+    },
+    "cultural_connections": {
+      "taino_uses": [
+        "Conch shells for tools, horns, ceremonial objects",
+        "Land crabs as food source",
+        "Dyes from mollusks",
+        "Shells for jewelry and decoration",
+        "Spiritual significance of certain species"
+      ],
+      "contemporary_uses": [
+        "Traditional foods (land crabs, lobster, conch, shrimp)",
+        "Bait for fishing",
+        "Pest control (beneficial insects)",
+        "Scientific research",
+        "Ecotourism (coral reefs, bioluminescence)",
+        "Education and appreciation"
+      ]
+    },
+    "web3_applications": {
+      "nft_potential": [
+        "Endemic land snail species (unique, rare)",
+        "Coral species (conservation awareness)",
+        "Butterflies and moths (beautiful, charismatic)",
+        "Traditional knowledge of invertebrate uses",
+        "Taíno Ant (named after indigenous people)"
+      ],
+      "conservation_tokens": "Could fund invertebrate research and conservation",
+      "citizen_science": "Blockchain verification of observations"
+    }
+  }
+}
