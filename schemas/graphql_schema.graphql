@@ -1,0 +1,1214 @@
+# =====================================================
+# Borikén Biodiversity Database - GraphQL Schema
+# =====================================================
+# Version: 1.0.0
+# Last Updated: 2025-11-05
+# Description: Comprehensive GraphQL schema for Puerto Rico's biodiversity API
+#              with cultural protocols, justice framework, and web3 integration
+# =====================================================
+
+# =====================================================
+# SCALAR TYPES
+# =====================================================
+
+scalar DateTime
+scalar Date
+scalar JSON
+scalar Geography  # GeoJSON format
+scalar UUID
+
+# =====================================================
+# ENUMS
+# =====================================================
+
+enum EndemicStatus {
+  ENDEMIC_PUERTO_RICO
+  ENDEMIC_CARIBBEAN
+  NATIVE
+  INTRODUCED
+  INVASIVE
+  VAGRANT
+}
+
+enum ConservationStatus {
+  EXTINCT
+  EXTINCT_IN_WILD
+  CRITICALLY_ENDANGERED
+  ENDANGERED
+  VULNERABLE
+  NEAR_THREATENED
+  LEAST_CONCERN
+  DATA_DEFICIENT
+  NOT_EVALUATED
+}
+
+enum PopulationTrend {
+  INCREASING
+  STABLE
+  DECREASING
+  UNKNOWN
+  EXTINCT
+}
+
+enum EcosystemType {
+  TROPICAL_RAINFOREST
+  SUBTROPICAL_DRY_FOREST
+  SUBTROPICAL_MOIST_FOREST
+  MANGROVE
+  CORAL_REEF
+  SEAGRASS_MEADOW
+  CAVE_SYSTEM
+  CLOUD_FOREST
+  COASTAL_SCRUB
+  WETLAND
+  FRESHWATER_STREAM
+  LAGOON
+  AGRICULTURAL
+  URBAN
+}
+
+enum ProtectionStatus {
+  NATIONAL_FOREST
+  NATIONAL_WILDLIFE_REFUGE
+  STATE_FOREST
+  UNESCO_BIOSPHERE_RESERVE
+  MARINE_PROTECTED_AREA
+  CRITICAL_HABITAT
+  PRIVATE_CONSERVATION
+  UNPROTECTED
+}
+
+enum CulturalSignificance {
+  VERY_HIGH
+  HIGH
+  MODERATE
+  LOW
+}
+
+enum KnowledgeType {
+  MEDICINAL
+  CEREMONIAL
+  FOOD
+  CRAFT
+  SPIRITUAL
+  ECOLOGICAL
+  ASTRONOMICAL
+  SEASONAL
+  NAVIGATION
+  SYMBOLIC
+}
+
+enum SensitivityLevel {
+  PUBLIC
+  COMMUNITY_ONLY
+  SACRED
+  RESTRICTED
+}
+
+enum FPICStatus {
+  CONSENT_GRANTED
+  CONSENT_PENDING
+  CONSENT_DENIED
+  NOT_REQUIRED
+}
+
+enum ThreatCategory {
+  HABITAT_LOSS
+  HABITAT_DEGRADATION
+  INVASIVE_SPECIES
+  CLIMATE_CHANGE
+  POLLUTION
+  OVERHARVESTING
+  DISEASE
+  PREDATION
+  HUMAN_DISTURBANCE
+  NATURAL_DISASTERS
+  GENETIC_FACTORS
+}
+
+enum Severity {
+  CRITICAL
+  HIGH
+  MODERATE
+  LOW
+  UNKNOWN
+}
+
+enum ActionType {
+  HABITAT_PROTECTION
+  HABITAT_RESTORATION
+  SPECIES_RECOVERY
+  CAPTIVE_BREEDING
+  REINTRODUCTION
+  INVASIVE_CONTROL
+  RESEARCH
+  MONITORING
+  EDUCATION
+  POLICY
+  COMMUNITY_BASED
+  TRADITIONAL_PRACTICES
+}
+
+enum HabitatPreference {
+  PRIMARY
+  SECONDARY
+  OCCASIONAL
+  RARE
+}
+
+enum LifeStage {
+  ADULT
+  JUVENILE
+  LARVA
+  EGG
+  SEEDLING
+  UNKNOWN
+}
+
+enum Sex {
+  MALE
+  FEMALE
+  UNKNOWN
+}
+
+enum FloodRisk {
+  EXTREME
+  HIGH
+  MODERATE
+  LOW
+}
+
+enum DataQuality {
+  VERIFIED
+  PRELIMINARY
+  UNVERIFIED
+  DISPUTED
+}
+
+# =====================================================
+# TAXONOMY & SPECIES TYPES
+# =====================================================
+
+type Taxonomy {
+  id: ID!
+  kingdom: String!
+  phylum: String
+  class: String
+  order: String
+  family: String
+  genus: String
+  species: String
+  subspecies: String
+  scientificName: String!
+  authority: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Species {
+  id: UUID!
+  taxonomy: Taxonomy!
+  commonName: String
+  commonNameSpanish: String
+  tainoName: String
+  tainoEtymology: String
+
+  # Endemic and conservation status
+  endemicStatus: EndemicStatus
+  conservationStatus: ConservationStatus
+  conservationStatusDate: Date
+
+  # Description
+  description: String
+  physicalDescription: String
+  behavior: String
+  diet: String
+  reproduction: String
+  lifespanYearsMin: Float
+  lifespanYearsMax: Float
+
+  # Size metrics
+  sizeLengthCmMin: Float
+  sizeLengthCmMax: Float
+  sizeWingspanCmMin: Float
+  sizeWingspanCmMax: Float
+  sizeWeightGMin: Float
+  sizeWeightGMax: Float
+
+  # Population data
+  populationEstimateMin: Int
+  populationEstimateMax: Int
+  populationEstimateYear: Int
+  populationTrend: PopulationTrend
+  populationHistory: [PopulationHistory!]!
+
+  # Relationships
+  habitats: [SpeciesHabitat!]!
+  observations: [Observation!]!
+  culturalKnowledge: [CulturalKnowledge!]!
+  threats: [SpeciesThreat!]!
+
+  # References
+  primaryReference: String
+  iucnLink: String
+  gbifId: String
+
+  # Web3 metadata
+  nftReady: Boolean!
+  rarityScore: Float
+  culturalValue: Float
+  ecologicalValue: Float
+  nftMetadata: NFTMetadata
+
+  # Metadata
+  dataQuality: DataQuality!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type SpeciesCommonName {
+  id: ID!
+  species: Species!
+  commonName: String!
+  language: String!
+  isPrimary: Boolean!
+  region: String
+  createdAt: DateTime!
+}
+
+type PopulationHistory {
+  id: ID!
+  species: Species!
+  year: Int!
+  populationEstimate: Int
+  populationMin: Int
+  populationMax: Int
+  wildPopulation: Int
+  captivePopulation: Int
+  methodology: String
+  dataSource: String
+  confidenceLevel: String
+  notes: String
+  createdAt: DateTime!
+}
+
+type PopulationTrendData {
+  year: Int!
+  population: Int!
+  percentChange: Float
+}
+
+# =====================================================
+# HABITATS & ECOSYSTEMS
+# =====================================================
+
+type Ecosystem {
+  id: UUID!
+  name: String!
+  nameSpanish: String
+  tainoName: String
+  ecosystemType: EcosystemType!
+
+  # Geographic data
+  locationName: String
+  geography: Geography
+  areaKm2: Float
+  elevationMinM: Int
+  elevationMaxM: Int
+
+  # Climate data
+  annualRainfallMmMin: Int
+  annualRainfallMmMax: Int
+  temperatureAvgC: Float
+
+  # Biodiversity metrics
+  speciesCountTotal: Int
+  speciesCountEndemic: Int
+  speciesCountThreatened: Int
+  speciesList: [Species!]!
+
+  # Description
+  description: String
+  ecologicalImportance: String
+  threats: [String!]
+
+  # Conservation
+  protectionStatus: ProtectionStatus
+  protectionLevel: String
+  managingAgency: String
+
+  # Cultural significance
+  culturalSignificance: CulturalSignificance
+  sacredSite: Boolean!
+  spiritualSignificance: String
+
+  # Conservation actions
+  conservationActions: [ConservationAction!]!
+
+  # Metadata
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type SpeciesHabitat {
+  id: ID!
+  species: Species!
+  ecosystem: Ecosystem!
+  habitatPreference: HabitatPreference
+  breedingHabitat: Boolean!
+  feedingHabitat: Boolean!
+  seasonal: Boolean!
+  season: String
+  notes: String
+  createdAt: DateTime!
+}
+
+type Observation {
+  id: UUID!
+  species: Species!
+  location: Geography!
+  observationDate: Date!
+  observationTime: String
+  observerName: String
+  observerEmail: String
+
+  # Observation details
+  individualCount: Int
+  lifeStage: LifeStage
+  sex: Sex
+  behaviorObserved: String
+
+  # Verification
+  verified: Boolean!
+  verifiedBy: String
+  verifiedDate: Date
+
+  # Media
+  hasPhoto: Boolean!
+  hasAudio: Boolean!
+  mediaUrls: [String!]
+
+  # Citizen science
+  projectName: String
+  observationPlatform: String
+  externalId: String
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# =====================================================
+# CULTURAL KNOWLEDGE & TRADITIONAL USE
+# =====================================================
+
+type CulturalKnowledge {
+  id: UUID!
+  species: Species!
+
+  # Knowledge content
+  knowledgeType: KnowledgeType!
+  traditionalUse: String!
+  preparationMethod: String
+  seasonalTiming: String
+  spiritualContext: String
+  taboosRestrictions: String
+
+  # Attribution & sovereignty
+  knowledgeHolder: String
+  communitySource: String
+  elderName: String
+  documentationDate: Date
+
+  # Cultural protocols (FPIC compliance)
+  sensitivityLevel: SensitivityLevel!
+  fpicStatus: FPICStatus
+  fpicDocumentation: String
+  communityApprovalStatus: String
+  elderConsultationComplete: Boolean!
+
+  # Access control
+  publicAccess: Boolean!
+  commercialUseAllowed: Boolean!
+  attributionRequired: Boolean!
+  benefitSharingAgreement: String
+
+  # Usage restrictions
+  usageRestrictions: String!
+  prohibitedUses: [String!]
+  requiredProtocols: [String!]
+
+  # Metadata
+  culturalSignificance: CulturalSignificance
+  historicalContinuity: Boolean
+  endangermentStatus: String
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type EcologicalCalendar {
+  id: ID!
+  eventName: String!
+  eventNameTaino: String
+  eventType: String!
+
+  # Timing
+  startMonth: Int!
+  endMonth: Int!
+  lunarPhase: String
+
+  # Related species
+  primarySpecies: Species
+  relatedSpecies: [Species!]
+
+  # Traditional knowledge
+  traditionalSignificance: String
+  contemporaryRelevance: String
+
+  createdAt: DateTime!
+}
+
+# =====================================================
+# CONSERVATION & THREATS
+# =====================================================
+
+type Threat {
+  id: ID!
+  threatName: String!
+  threatCategory: ThreatCategory!
+  description: String
+  mitigationStrategies: String
+  createdAt: DateTime!
+}
+
+type SpeciesThreat {
+  id: ID!
+  species: Species!
+  threat: Threat!
+  severity: Severity!
+  trend: PopulationTrend
+  specificDetails: String
+  geographicScope: String
+  firstDocumented: Date
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type ConservationAction {
+  id: UUID!
+  actionName: String!
+  actionType: ActionType!
+
+  # Scope
+  targetSpecies: [Species!]!
+  targetEcosystems: [Ecosystem!]
+  geographicArea: Geography
+
+  # Implementation
+  implementingOrganization: String
+  partnerOrganizations: [String!]
+  communityInvolvement: Boolean!
+  indigenousLeadership: Boolean!
+
+  # Timeline
+  startDate: Date
+  endDate: Date
+  ongoing: Boolean!
+
+  # Funding
+  totalBudgetUsd: Float
+  fundingSources: [String!]
+
+  # Results
+  successMetrics: String
+  resultsSummary: String
+  effectiveness: String
+
+  # References
+  projectUrl: String
+  reports: [String!]
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type InvasiveSpecies {
+  id: ID!
+  species: Species!
+  originRegion: String
+  introductionDateMin: Int
+  introductionDateMax: Int
+  introductionPathway: String
+
+  # Impact assessment
+  ecologicalImpact: Severity
+  economicImpactUsd: Float
+  humanHealthImpact: Boolean!
+
+  # Distribution
+  currentDistributionAreaKm2: Float
+  spreadRate: String
+
+  # Native species affected
+  nativeSpeciesAffected: [Species!]
+  ecosystemsAffected: [Ecosystem!]
+
+  # Control efforts
+  controlMethods: [String!]
+  controlEffectiveness: String
+  eradicationFeasible: Boolean
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# =====================================================
+# JUSTICE FRAMEWORK
+# =====================================================
+
+type EnvironmentalJusticeCommunity {
+  id: UUID!
+  communityName: String!
+  communityNameSpanish: String
+  municipality: String
+
+  # Geographic
+  location: Geography!
+  boundary: Geography
+
+  # Demographics
+  population: Int
+  medianIncomeUsd: Int
+  povertyRate: Float
+  unemploymentRate: Float
+  percentMinority: Float
+  percentBlack: Float
+  percentIndigenous: Float
+
+  # Environmental burdens
+  pollutionSources: [String!]
+  superfundSites: Boolean!
+  coalAshExposure: Boolean!
+  landfillProximityKm: Float
+  industrialFacilityCount: Int
+
+  # Health impacts
+  asthmaRate: Float
+  cancerCluster: Boolean!
+  environmentalHealthIssues: [String!]
+
+  # Climate vulnerability
+  floodRisk: FloodRisk
+  hurricaneVulnerability: String
+  heatIslandEffect: Boolean!
+  seaLevelRiseRisk: Boolean!
+
+  # Infrastructure
+  waterQualityIssues: Boolean!
+  powerGridReliability: String
+  averagePowerOutageHoursYearly: Int
+
+  # Hurricane Maria impact
+  mariaDamageLevel: String
+  mariaRecoveryStatus: String
+  daysWithoutPowerPostMaria: Int
+
+  # Classification
+  sacrificeZone: Boolean!
+  environmentalJusticePriority: Boolean!
+
+  # Resistance & resilience
+  communityOrganizingActive: Boolean!
+  organizingGroups: [String!]
+  renewableEnergyProjects: [String!]
+  communityResilienceInitiatives: [String!]
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type FoodSystem {
+  id: ID!
+  municipality: String!
+
+  # Agricultural land
+  agriculturalLandAcres: Int
+  activelyFarmedAcres: Int
+  abandonedFarmlandAcres: Int
+
+  # Food production
+  localFoodProductionPercentage: Float
+  importDependencePercentage: Float
+
+  # Traditional agriculture
+  conucoSystemsActive: Int
+  agroecologicalFarms: Int
+  traditionalCrops: [String!]
+
+  # Food access
+  foodDesert: Boolean!
+  supermarketAccessKm: Float
+  farmersMarketsCount: Int
+
+  # Food security metrics
+  foodInsecurityRate: Float
+  snapParticipationRate: Float
+
+  # Projects
+  foodSovereigntyInitiatives: [String!]
+  urbanAgricultureProjects: Int
+  communityGardens: Int
+  seedSavingNetworks: Boolean!
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type EconomicEcology {
+  id: ID!
+  metricName: String!
+  metricCategory: String!
+
+  # Value metrics
+  valueUsd: Float
+  valuePerCapitaUsd: Float
+  measurementYear: Int
+
+  # Beneficiary analysis
+  primaryBeneficiaries: String
+  communityBenefitPercentage: Float
+  corporateBenefitPercentage: Float
+
+  # Geographic scope
+  municipality: String
+  ecosystem: Ecosystem
+
+  description: String
+  dataSource: String
+
+  createdAt: DateTime!
+}
+
+type RightsOfNatureProposal {
+  id: UUID!
+  proposalName: String!
+  ecosystem: Ecosystem
+
+  # Legal framework
+  proposedRights: [String!]!
+  legalPersonhood: Boolean!
+  guardianEntity: String
+
+  # Status
+  status: String!
+  proposalDate: Date
+  adoptionDate: Date
+
+  # Support
+  supportingOrganizations: [String!]
+  indigenousEndorsement: Boolean!
+  communitySupportLevel: String
+
+  # Implementation
+  enforcementMechanisms: [String!]
+  monitoringProtocols: [String!]
+
+  description: String
+  fullTextUrl: String
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# =====================================================
+# WEB3 & BLOCKCHAIN INTEGRATION
+# =====================================================
+
+type NFTMetadata {
+  id: UUID!
+  species: Species!
+
+  # NFT details
+  tokenStandard: String!
+  contractAddress: String
+  tokenId: String
+  blockchain: String!
+
+  # Metadata
+  name: String!
+  description: String!
+  imageUrl: String
+  externalUrl: String
+  animationUrl: String
+
+  # Attributes
+  attributes: JSON!
+
+  # Cultural protocol
+  culturalAttribution: String!
+  usageRestrictions: String!
+  communityBenefitPercentage: Float!
+  royaltyRecipients: [String!]
+
+  # Values
+  rarityScore: Float
+  culturalSignificanceScore: Float
+  conservationPriorityScore: Float
+
+  # Minting status
+  minted: Boolean!
+  mintDate: DateTime
+  ownerAddress: String
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type ConservationReward {
+  id: UUID!
+  userWalletAddress: String!
+
+  # Action
+  actionType: String!
+  actionDescription: String
+
+  # Related entities
+  species: Species
+  ecosystem: Ecosystem
+  observation: Observation
+
+  # Reward
+  tokenAmount: Float!
+  tokenSymbol: String!
+  usdValue: Float
+
+  # Verification
+  verified: Boolean!
+  verifiedBy: String
+  verificationDate: DateTime
+
+  # Blockchain transaction
+  transactionHash: String
+  blockNumber: Int
+
+  createdAt: DateTime!
+}
+
+type DAOProposal {
+  id: UUID!
+  proposalTitle: String!
+  proposalType: String!
+
+  # Proposal details
+  description: String!
+  fundingRequestedUsd: Float
+  targetSpecies: [Species!]
+  targetEcosystems: [Ecosystem!]
+  beneficiaryCommunities: [String!]
+
+  # Voting
+  votingStart: DateTime!
+  votingEnd: DateTime!
+  quorumRequired: Float
+  votesFor: Int!
+  votesAgainst: Int!
+  votesAbstain: Int!
+
+  # Status
+  status: String!
+
+  # Execution
+  executionDate: DateTime
+  transactionHash: String
+
+  # Proposer
+  proposerAddress: String!
+  proposerName: String
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# =====================================================
+# RESEARCH & EDUCATION
+# =====================================================
+
+type ResearchProject {
+  id: UUID!
+  projectName: String!
+  projectType: String!
+
+  # Scope
+  targetSpecies: [Species!]
+  targetEcosystems: [Ecosystem!]
+
+  # Organizations
+  leadInstitution: String
+  collaboratingInstitutions: [String!]
+  principalInvestigator: String
+
+  # Timeline
+  startDate: Date
+  endDate: Date
+
+  # Funding
+  fundingAmountUsd: Float
+  fundingSources: [String!]
+
+  # Output
+  publications: [String!]
+  datasets: [String!]
+  projectUrl: String
+
+  # Status
+  status: String!
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type EducationalResource {
+  id: UUID!
+  title: String!
+  resourceType: String!
+
+  # Target audience
+  audience: String!
+  gradeLevel: String
+
+  # Content
+  description: String
+  learningObjectives: [String!]
+  topics: [String!]
+
+  # Related content
+  relatedSpecies: [Species!]
+  relatedEcosystems: [Ecosystem!]
+
+  # Languages
+  languages: [String!]!
+
+  # Access
+  url: String
+  license: String!
+  costUsd: Float!
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# =====================================================
+# QUERY ROOT
+# =====================================================
+
+type Query {
+  # Species queries
+  species(id: UUID!): Species
+  speciesList(
+    limit: Int
+    offset: Int
+    endemicStatus: EndemicStatus
+    conservationStatus: ConservationStatus
+    culturalSignificance: CulturalSignificance
+    nftReady: Boolean
+    searchTerm: String
+  ): [Species!]!
+  speciesCount(
+    endemicStatus: EndemicStatus
+    conservationStatus: ConservationStatus
+  ): Int!
+  speciesNearLocation(
+    latitude: Float!
+    longitude: Float!
+    radiusKm: Float!
+  ): [Species!]!
+  endangeredSpecies: [Species!]!
+  endemicSpecies: [Species!]!
+
+  # Population data
+  populationTrend(speciesId: UUID!): [PopulationTrendData!]!
+
+  # Ecosystem queries
+  ecosystem(id: UUID!): Ecosystem
+  ecosystemsList(
+    limit: Int
+    offset: Int
+    ecosystemType: EcosystemType
+    protectionStatus: ProtectionStatus
+  ): [Ecosystem!]!
+
+  # Observations
+  observation(id: UUID!): Observation
+  recentObservations(days: Int): [Observation!]!
+  observationsBySpecies(speciesId: UUID!): [Observation!]!
+
+  # Cultural knowledge (respects FPIC and access controls)
+  culturalKnowledge(id: UUID!): CulturalKnowledge
+  publicCulturalKnowledge(
+    knowledgeType: KnowledgeType
+    culturalSignificance: CulturalSignificance
+  ): [CulturalKnowledge!]!
+
+  # Conservation
+  conservationActions(
+    actionType: ActionType
+    ongoing: Boolean
+  ): [ConservationAction!]!
+  invasiveSpeciesList: [InvasiveSpecies!]!
+  threatenedSpeciesWithHabitats: [Species!]!
+
+  # Justice framework
+  environmentalJusticeCommunities(
+    sacrificeZone: Boolean
+    municipality: String
+  ): [EnvironmentalJusticeCommunity!]!
+  sacrificeZones: [EnvironmentalJusticeCommunity!]!
+  foodSystems(municipality: String): [FoodSystem!]!
+  economicEcologyMetrics(
+    category: String
+    municipality: String
+  ): [EconomicEcology!]!
+  rightsOfNatureProposals(status: String): [RightsOfNatureProposal!]!
+
+  # Web3
+  nftMetadata(speciesId: UUID!): NFTMetadata
+  nftReadySpecies: [Species!]!
+  conservationRewardsByWallet(walletAddress: String!): [ConservationReward!]!
+  daoProposals(
+    status: String
+    proposalType: String
+  ): [DAOProposal!]!
+  activeProposals: [DAOProposal!]!
+
+  # Research & Education
+  researchProjects(
+    projectType: String
+    status: String
+  ): [ResearchProject!]!
+  educationalResources(
+    audience: String
+    resourceType: String
+    language: String
+  ): [EducationalResource!]!
+
+  # Statistics
+  biodiversityStats: BiodiversityStats!
+}
+
+type BiodiversityStats {
+  totalSpecies: Int!
+  endemicSpecies: Int!
+  criticallyEndangeredSpecies: Int!
+  endangeredSpecies: Int!
+  vulnerableSpecies: Int!
+  totalObservations: Int!
+  verifiedObservations: Int!
+  conservationActionsActive: Int!
+  ecosystemsProtected: Int!
+  sacrificeZones: Int!
+  communitiesOrganizing: Int!
+}
+
+# =====================================================
+# MUTATION ROOT
+# =====================================================
+
+type Mutation {
+  # Species observation submission
+  submitObservation(input: ObservationInput!): Observation!
+  verifyObservation(id: UUID!, verifiedBy: String!): Observation!
+
+  # Conservation actions
+  createConservationAction(input: ConservationActionInput!): ConservationAction!
+  updateConservationAction(id: UUID!, input: ConservationActionInput!): ConservationAction!
+
+  # Cultural knowledge (requires FPIC compliance)
+  submitCulturalKnowledge(input: CulturalKnowledgeInput!): CulturalKnowledge!
+  updateCulturalKnowledgeAccess(id: UUID!, publicAccess: Boolean!): CulturalKnowledge!
+
+  # DAO proposals
+  createProposal(input: ProposalInput!): DAOProposal!
+  voteOnProposal(proposalId: UUID!, vote: VoteType!, voterAddress: String!): DAOProposal!
+  executeProposal(proposalId: UUID!): DAOProposal!
+
+  # Conservation rewards
+  claimReward(
+    walletAddress: String!
+    actionType: String!
+    actionDescription: String!
+    relatedEntityId: UUID
+  ): ConservationReward!
+
+  # NFT minting
+  mintSpeciesNFT(speciesId: UUID!, ownerAddress: String!): NFTMetadata!
+}
+
+# =====================================================
+# INPUT TYPES
+# =====================================================
+
+input ObservationInput {
+  speciesId: UUID!
+  latitude: Float!
+  longitude: Float!
+  observationDate: Date!
+  observationTime: String
+  observerName: String
+  observerEmail: String
+  individualCount: Int
+  lifeStage: LifeStage
+  sex: Sex
+  behaviorObserved: String
+  hasPhoto: Boolean
+  hasAudio: Boolean
+  mediaUrls: [String!]
+  projectName: String
+  observationPlatform: String
+}
+
+input ConservationActionInput {
+  actionName: String!
+  actionType: ActionType!
+  targetSpeciesIds: [UUID!]!
+  targetEcosystemIds: [UUID!]
+  implementingOrganization: String
+  partnerOrganizations: [String!]
+  communityInvolvement: Boolean
+  indigenousLeadership: Boolean
+  startDate: Date
+  endDate: Date
+  ongoing: Boolean
+  totalBudgetUsd: Float
+  fundingSources: [String!]
+  projectUrl: String
+}
+
+input CulturalKnowledgeInput {
+  speciesId: UUID!
+  knowledgeType: KnowledgeType!
+  traditionalUse: String!
+  preparationMethod: String
+  seasonalTiming: String
+  spiritualContext: String
+  knowledgeHolder: String
+  communitySource: String
+  documentationDate: Date
+  sensitivityLevel: SensitivityLevel!
+  fpicStatus: FPICStatus
+  fpicDocumentation: String
+  publicAccess: Boolean!
+  commercialUseAllowed: Boolean!
+  usageRestrictions: String!
+  culturalSignificance: CulturalSignificance
+}
+
+input ProposalInput {
+  proposalTitle: String!
+  proposalType: String!
+  description: String!
+  fundingRequestedUsd: Float
+  targetSpeciesIds: [UUID!]
+  targetEcosystemIds: [UUID!]
+  beneficiaryCommunities: [String!]
+  votingDurationDays: Int!
+  proposerAddress: String!
+  proposerName: String
+}
+
+enum VoteType {
+  FOR
+  AGAINST
+  ABSTAIN
+}
+
+# =====================================================
+# SUBSCRIPTION ROOT
+# =====================================================
+
+type Subscription {
+  # Real-time observation updates
+  observationAdded(speciesId: UUID): Observation!
+
+  # Conservation action updates
+  conservationActionUpdated(ecosystemId: UUID): ConservationAction!
+
+  # DAO proposal updates
+  proposalStatusChanged(proposalId: UUID): DAOProposal!
+  newProposal: DAOProposal!
+
+  # Token rewards
+  rewardClaimed(walletAddress: String!): ConservationReward!
+
+  # Population alerts
+  populationAlert(speciesId: UUID): PopulationAlert!
+}
+
+type PopulationAlert {
+  species: Species!
+  alertType: String!
+  message: String!
+  timestamp: DateTime!
+}
+
+# =====================================================
+# DIRECTIVES
+# =====================================================
+
+directive @auth(
+  requires: [Role!]!
+) on FIELD_DEFINITION
+
+directive @fpic(
+  required: Boolean!
+) on FIELD_DEFINITION
+
+directive @rateLimit(
+  limit: Int!
+  window: String!
+) on FIELD_DEFINITION
+
+enum Role {
+  PUBLIC
+  CONTRIBUTOR
+  RESEARCHER
+  CULTURAL_GUARDIAN
+  ADMIN
+}
+
+# =====================================================
+# SCHEMA DOCUMENTATION
+# =====================================================
+
+"""
+Borikén Biodiversity GraphQL API
+
+This API provides access to comprehensive biodiversity data for Puerto Rico
+(Borikén in Taíno language) with cultural protocols, justice framework analysis,
+and web3 integration.
+
+## Cultural Protocols
+
+All cultural knowledge is protected by Free, Prior, and Informed Consent (FPIC)
+protocols. Sacred and restricted knowledge requires special authentication and
+community approval.
+
+## Rate Limits
+
+- Public endpoints: 1000 requests/hour
+- Authenticated endpoints: 5000 requests/hour
+- Cultural knowledge endpoints: 100 requests/hour with approval
+
+## Data Sovereignty
+
+This data is governed by Indigenous Data Sovereignty principles. Benefits from
+commercial use must be shared with knowledge holders and communities.
+
+## Authentication
+
+Supported methods:
+- API Key
+- OAuth2
+- Web3 Wallet (for blockchain features)
+
+For more information, visit: https://github.com/your-org/puerto-rico-ecology
+"""

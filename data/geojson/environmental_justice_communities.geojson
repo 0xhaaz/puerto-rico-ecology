@@ -1,0 +1,668 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Environmental Justice Communities in Borikén (Puerto Rico)",
+    "description": "Geographic mapping of sacrifice zones, vulnerable communities, pollution burdens, and climate justice impacts across Puerto Rico",
+    "version": "1.0.0",
+    "last_updated": "2025-11-05",
+    "data_sources": [
+      "US Census 2020",
+      "EPA Toxic Release Inventory",
+      "FEMA Hurricane Maria Recovery Data (2017-2025)",
+      "Puerto Rico Energy Bureau",
+      "Community organizing networks"
+    ],
+    "cultural_acknowledgment": "These communities are home to Boricua people, many of whom are descendants of Taíno, African, and other Indigenous peoples",
+    "justice_framework": "Data compiled to support environmental justice advocacy and community organizing",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ej-001",
+      "properties": {
+        "community_name": "Guayama",
+        "community_name_spanish": "Guayama",
+        "municipality": "Guayama",
+        "region": "Southeast Coast",
+        "classification": "SACRIFICE_ZONE",
+        "environmental_justice_priority": true,
+
+        "demographics": {
+          "population": 42460,
+          "poverty_rate": 51.2,
+          "unemployment_rate": 14.8,
+          "percent_minority": 98.5,
+          "percent_black": 15.3,
+          "median_income_usd": 18200,
+          "census_year": 2020
+        },
+
+        "environmental_burdens": {
+          "coal_ash_exposure": true,
+          "coal_ash_description": "AES coal plant contamination - 1.5 million tons coal ash stored unsafely",
+          "pollution_sources": [
+            "AES coal-fired power plant (operational until 2022)",
+            "Coal ash storage ponds",
+            "Industrial facilities",
+            "EPA Superfund site nearby"
+          ],
+          "superfund_sites": true,
+          "air_quality_index": "poor",
+          "water_contamination_risk": "high"
+        },
+
+        "health_impacts": {
+          "asthma_rate_per_1000": 145.2,
+          "cancer_cluster": true,
+          "cancer_types": ["lung", "respiratory"],
+          "respiratory_illness_elevated": true,
+          "environmental_health_crisis": "Coal ash contamination affects drinking water and air quality"
+        },
+
+        "climate_vulnerability": {
+          "flood_risk": "high",
+          "sea_level_rise_risk": true,
+          "hurricane_vulnerability": "extreme",
+          "heat_island_effect": true,
+          "coastal_erosion_risk": "high"
+        },
+
+        "hurricane_maria_impact": {
+          "damage_level": "catastrophic",
+          "days_without_power": 240,
+          "recovery_status_2025": "partial",
+          "fema_aid_inadequate": true,
+          "community_assessment": "Last to recover power, inadequate federal response"
+        },
+
+        "infrastructure": {
+          "power_grid_reliability": "poor",
+          "average_outage_hours_yearly": 180,
+          "water_quality_issues": true,
+          "water_contamination_sources": ["coal ash leaching"],
+          "renewable_energy_access": "very limited"
+        },
+
+        "community_organizing": {
+          "active": true,
+          "organizations": [
+            "Comunidad Marítima de Jobos",
+            "Comité Diálogo Ambiental",
+            "Sierra Club Puerto Rico"
+          ],
+          "key_victories": [
+            "Forced closure of AES coal plant (2022)",
+            "Ongoing fight for coal ash cleanup",
+            "Renewable energy advocacy"
+          ],
+          "current_campaigns": [
+            "Coal ash removal and remediation",
+            "Prevent new fossil fuel projects",
+            "Community solar development"
+          ]
+        },
+
+        "justice_analysis": {
+          "sacrifice_zone_rationale": "Predominantly Black and low-income community burdened with coal plant and ash storage for decades while profits went to corporations",
+          "environmental_racism": "Coal plant siting in minority community is environmental racism",
+          "colonial_power_dynamics": "Federal policy allowed toxic facility in territory without full democratic representation",
+          "intersectional_impacts": "Race, poverty, and colonial status intersect to create compounding injustice"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.1131, 17.9744]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "ej-002",
+      "properties": {
+        "community_name": "Salinas",
+        "community_name_spanish": "Salinas",
+        "municipality": "Salinas",
+        "region": "South Coast",
+        "classification": "SACRIFICE_ZONE",
+        "environmental_justice_priority": true,
+
+        "demographics": {
+          "population": 29753,
+          "poverty_rate": 48.7,
+          "unemployment_rate": 13.2,
+          "percent_minority": 97.8,
+          "percent_black": 12.1,
+          "median_income_usd": 19500
+        },
+
+        "environmental_burdens": {
+          "coal_ash_exposure": true,
+          "pollution_sources": [
+            "Aguirre power complex",
+            "Industrial port facilities",
+            "Petrochemical storage"
+          ],
+          "superfund_sites": false,
+          "air_quality_index": "poor"
+        },
+
+        "health_impacts": {
+          "asthma_rate_per_1000": 138.5,
+          "respiratory_illness_elevated": true
+        },
+
+        "climate_vulnerability": {
+          "flood_risk": "extreme",
+          "sea_level_rise_risk": true,
+          "hurricane_vulnerability": "extreme",
+          "saltwater_intrusion": true
+        },
+
+        "hurricane_maria_impact": {
+          "damage_level": "catastrophic",
+          "days_without_power": 220,
+          "recovery_status_2025": "partial"
+        },
+
+        "infrastructure": {
+          "power_grid_reliability": "poor",
+          "average_outage_hours_yearly": 165,
+          "water_quality_issues": true
+        },
+
+        "community_organizing": {
+          "active": true,
+          "organizations": ["Queremos Sol", "CAMBIO PR"],
+          "current_campaigns": ["Just transition to renewables", "Coal ash cleanup"]
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.2981, 17.9741]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "ej-003",
+      "properties": {
+        "community_name": "Peñuelas",
+        "community_name_spanish": "Peñuelas",
+        "municipality": "Peñuelas",
+        "region": "Southwest Coast",
+        "classification": "SACRIFICE_ZONE",
+        "environmental_justice_priority": true,
+
+        "demographics": {
+          "population": 22515,
+          "poverty_rate": 49.8,
+          "unemployment_rate": 15.3,
+          "percent_minority": 98.2,
+          "percent_black": 11.7,
+          "median_income_usd": 17800
+        },
+
+        "environmental_burdens": {
+          "pollution_sources": [
+            "EcoEléctrica LNG facility",
+            "Industrial port",
+            "Petrochemical storage",
+            "Former oil refinery"
+          ],
+          "superfund_sites": true,
+          "air_quality_index": "poor",
+          "lng_facility_risk": "explosion and fire hazard"
+        },
+
+        "health_impacts": {
+          "asthma_rate_per_1000": 142.1,
+          "cancer_cluster_concern": true,
+          "respiratory_illness_elevated": true,
+          "community_health_concerns": "Elevated rates of respiratory illness near LNG facility"
+        },
+
+        "climate_vulnerability": {
+          "flood_risk": "high",
+          "hurricane_vulnerability": "extreme",
+          "industrial_accident_risk": "high - LNG facility"
+        },
+
+        "hurricane_maria_impact": {
+          "damage_level": "severe",
+          "days_without_power": 195,
+          "recovery_status_2025": "partial"
+        },
+
+        "community_organizing": {
+          "active": true,
+          "organizations": ["Comité Pro Salud Ambiental Tallaboa Alta"],
+          "key_victories": ["Stopped second gas pipeline"],
+          "current_campaigns": ["Renewable energy transition", "Air quality monitoring"]
+        },
+
+        "justice_analysis": {
+          "sacrifice_zone_rationale": "Low-income community hosting multiple fossil fuel facilities and toxic sites",
+          "environmental_racism": "Concentration of polluting industries in predominantly minority community"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.7223, 18.0581]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "ej-004",
+      "properties": {
+        "community_name": "Cataño",
+        "community_name_spanish": "Cataño",
+        "municipality": "Cataño",
+        "region": "San Juan Metropolitan Area",
+        "classification": "ENVIRONMENTAL_JUSTICE_COMMUNITY",
+        "environmental_justice_priority": true,
+
+        "demographics": {
+          "population": 26825,
+          "poverty_rate": 52.3,
+          "unemployment_rate": 16.8,
+          "percent_minority": 98.9,
+          "percent_black": 18.4,
+          "median_income_usd": 16200
+        },
+
+        "environmental_burdens": {
+          "pollution_sources": [
+            "Oil storage tanks",
+            "Industrial port facilities",
+            "Waste management facilities",
+            "Heavy traffic from port"
+          ],
+          "air_quality_index": "poor",
+          "proximity_to_hazardous_facilities": "immediate"
+        },
+
+        "health_impacts": {
+          "asthma_rate_per_1000": 151.3,
+          "respiratory_illness_elevated": true,
+          "pediatric_asthma_crisis": "Among highest rates in Puerto Rico"
+        },
+
+        "climate_vulnerability": {
+          "flood_risk": "extreme",
+          "sea_level_rise_risk": true,
+          "hurricane_vulnerability": "extreme",
+          "low_elevation": "highly vulnerable to storm surge"
+        },
+
+        "hurricane_maria_impact": {
+          "damage_level": "catastrophic",
+          "days_without_power": 175,
+          "recovery_status_2025": "partial",
+          "flooding_severe": true
+        },
+
+        "infrastructure": {
+          "power_grid_reliability": "poor",
+          "flood_protection": "inadequate",
+          "water_quality_issues": true
+        },
+
+        "community_organizing": {
+          "active": true,
+          "organizations": ["Comunidad en Acción", "Mothers for Clean Air"],
+          "current_campaigns": ["Relocate oil tanks", "Air quality justice", "Flood protection"]
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.1362, 18.4408]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "ej-005",
+      "properties": {
+        "community_name": "Canóvanas",
+        "community_name_spanish": "Canóvanas",
+        "municipality": "Canóvanas",
+        "region": "Northeast Coast",
+        "classification": "ENVIRONMENTAL_JUSTICE_COMMUNITY",
+        "environmental_justice_priority": true,
+
+        "demographics": {
+          "population": 45369,
+          "poverty_rate": 47.2,
+          "unemployment_rate": 12.8,
+          "percent_minority": 98.1,
+          "percent_black": 14.2,
+          "median_income_usd": 20100
+        },
+
+        "environmental_burdens": {
+          "pollution_sources": [
+            "Industrial facilities",
+            "Major highways",
+            "Waste management"
+          ],
+          "landfill_proximity_km": 2.5
+        },
+
+        "climate_vulnerability": {
+          "flood_risk": "high",
+          "hurricane_vulnerability": "extreme",
+          "landslide_risk": "moderate"
+        },
+
+        "hurricane_maria_impact": {
+          "damage_level": "catastrophic",
+          "days_without_power": 185,
+          "recovery_status_2025": "partial",
+          "infrastructure_damage_severe": true
+        },
+
+        "community_organizing": {
+          "active": true,
+          "renewable_energy_projects": ["Community solar project (2024)"],
+          "resilience_initiatives": ["Microgrid development", "Community emergency response"]
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.8976, 18.3787]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "ej-006",
+      "properties": {
+        "community_name": "Loíza",
+        "community_name_spanish": "Loíza",
+        "municipality": "Loíza",
+        "region": "Northeast Coast",
+        "classification": "ENVIRONMENTAL_JUSTICE_COMMUNITY",
+        "environmental_justice_priority": true,
+
+        "demographics": {
+          "population": 27572,
+          "poverty_rate": 56.8,
+          "unemployment_rate": 18.2,
+          "percent_minority": 99.2,
+          "percent_black": 64.3,
+          "median_income_usd": 14800,
+          "note": "Predominantly Afro-Boricua community with deep cultural heritage"
+        },
+
+        "environmental_burdens": {
+          "pollution_sources": [
+            "Illegal dumping sites",
+            "Waste management issues"
+          ],
+          "environmental_services_inadequate": true
+        },
+
+        "health_impacts": {
+          "environmental_health_issues": ["Vector-borne diseases", "Water quality concerns"]
+        },
+
+        "climate_vulnerability": {
+          "flood_risk": "extreme",
+          "sea_level_rise_risk": true,
+          "hurricane_vulnerability": "extreme",
+          "coastal_erosion_critical": true,
+          "low_lying_coastal_area": "extremely vulnerable"
+        },
+
+        "hurricane_maria_impact": {
+          "damage_level": "catastrophic",
+          "days_without_power": 265,
+          "recovery_status_2025": "incomplete",
+          "community_assessment": "Among last to receive aid, systemic neglect",
+          "fema_discrimination_documented": true
+        },
+
+        "infrastructure": {
+          "power_grid_reliability": "very poor",
+          "average_outage_hours_yearly": 220,
+          "water_infrastructure_failing": true,
+          "flood_protection": "none",
+          "infrastructure_investment_needed": "critical"
+        },
+
+        "community_organizing": {
+          "active": true,
+          "organizations": [
+            "G8 Loíza",
+            "Taller Comunidad La Goyco",
+            "Coalición de Comunidades Afrodescendientes de PR"
+          ],
+          "cultural_significance": "Center of Afro-Puerto Rican culture and Bomba tradition",
+          "key_victories": ["Community-led recovery", "Cultural preservation"],
+          "current_campaigns": [
+            "Climate resilience",
+            "Infrastructure justice",
+            "Anti-gentrification",
+            "Cultural land rights"
+          ]
+        },
+
+        "justice_analysis": {
+          "environmental_racism": "Predominantly Black community systematically denied infrastructure investment and disaster recovery aid",
+          "intersectional_impacts": "Race, poverty, and geographic isolation compound injustice",
+          "colonial_neglect": "Federal and territorial government failure to invest in Afro-descendant community",
+          "cultural_erasure_threat": "Gentrification and climate change threaten sacred cultural homeland"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.8797, 18.4321]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "ej-007",
+      "properties": {
+        "community_name": "Vieques",
+        "community_name_spanish": "Vieques",
+        "municipality": "Vieques",
+        "region": "Island Municipality",
+        "classification": "SACRIFICE_ZONE",
+        "environmental_justice_priority": true,
+
+        "demographics": {
+          "population": 8249,
+          "poverty_rate": 54.7,
+          "unemployment_rate": 17.5,
+          "percent_minority": 98.5,
+          "median_income_usd": 15900
+        },
+
+        "environmental_burdens": {
+          "military_contamination": true,
+          "pollution_sources": [
+            "US Navy bombing range contamination (1941-2003)",
+            "Unexploded ordnance",
+            "Heavy metals contamination",
+            "Depleted uranium suspected"
+          ],
+          "superfund_sites": true,
+          "cleanup_inadequate": "EPA cleanup ongoing but insufficient"
+        },
+
+        "health_impacts": {
+          "cancer_cluster": true,
+          "cancer_rate_elevated": "277% higher than Puerto Rico mainland",
+          "cancer_types": ["thyroid", "breast", "prostate", "lung"],
+          "respiratory_illness_elevated": true,
+          "heavy_metal_exposure": true,
+          "community_health_crisis": "Cancer epidemic linked to Navy contamination"
+        },
+
+        "climate_vulnerability": {
+          "hurricane_vulnerability": "extreme",
+          "island_isolation": "evacuation extremely difficult",
+          "sea_level_rise_risk": true
+        },
+
+        "hurricane_maria_impact": {
+          "damage_level": "catastrophic",
+          "days_without_power": 340,
+          "recovery_status_2025": "incomplete",
+          "fema_response_failure": "Aid delayed for months, community abandoned",
+          "community_self_organized_recovery": true
+        },
+
+        "infrastructure": {
+          "power_grid_reliability": "failed",
+          "hospital_services": "critically inadequate",
+          "ferry_service": "unreliable - only connection to main island",
+          "renewable_energy_potential": "high - solar ideal"
+        },
+
+        "community_organizing": {
+          "active": true,
+          "organizations": [
+            "Vieques en Rescate",
+            "Comité Pro Rescate y Desarrollo de Vieques",
+            "Amigos de Vieques"
+          ],
+          "historic_victories": [
+            "Forced US Navy to end bombing (2003) after decades of protest",
+            "Superfund site designation"
+          ],
+          "current_campaigns": [
+            "Comprehensive cleanup of Navy contamination",
+            "Cancer research and health care access",
+            "Renewable energy transition",
+            "Gentrification resistance",
+            "Land rights and self-determination"
+          ]
+        },
+
+        "justice_analysis": {
+          "sacrifice_zone_rationale": "Island used as US military bombing range for 62 years, contaminating land and causing cancer epidemic",
+          "environmental_racism": "Predominantly minority community sacrificed for military testing",
+          "colonial_violence": "US military occupation and contamination of Puerto Rican territory without consent",
+          "ongoing_injustice": "Cleanup inadequate, health crisis continues, gentrification threatens survivors",
+          "resistance_legacy": "Community organizing forced Navy out - model of environmental justice struggle"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.4434, 18.1266]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "ej-008",
+      "properties": {
+        "community_name": "Juncos",
+        "community_name_spanish": "Juncos",
+        "municipality": "Juncos",
+        "region": "East Central",
+        "classification": "ENVIRONMENTAL_JUSTICE_COMMUNITY",
+
+        "demographics": {
+          "population": 39803,
+          "poverty_rate": 45.3,
+          "unemployment_rate": 13.1,
+          "percent_minority": 97.9,
+          "median_income_usd": 21200
+        },
+
+        "climate_vulnerability": {
+          "flood_risk": "high",
+          "hurricane_vulnerability": "extreme",
+          "landslide_risk": "moderate to high"
+        },
+
+        "hurricane_maria_impact": {
+          "damage_level": "severe",
+          "days_without_power": 170,
+          "recovery_status_2025": "mostly recovered"
+        },
+
+        "community_organizing": {
+          "active": true,
+          "renewable_energy_projects": ["Solar cooperatives", "Community microgrids"],
+          "resilience_initiatives": ["Hurricane preparedness", "Agroecology projects"]
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.9207, 18.2275]
+      }
+    }
+  ],
+
+  "justice_framework_summary": {
+    "total_communities_mapped": 8,
+    "sacrifice_zones": 4,
+    "environmental_justice_priority": 8,
+    "population_affected": "250000+",
+
+    "common_burdens": [
+      "Fossil fuel facility proximity",
+      "Hurricane Maria disproportionate impacts",
+      "Power grid failure and chronic outages",
+      "Inadequate FEMA recovery aid",
+      "Poverty rates 45-57%",
+      "Environmental racism",
+      "Colonial power dynamics"
+    ],
+
+    "health_impacts_documented": [
+      "Elevated asthma rates (38-51% higher than PR average)",
+      "Cancer clusters (Vieques, Guayama)",
+      "Respiratory illness epidemics",
+      "Coal ash and heavy metal contamination exposure"
+    ],
+
+    "climate_justice_analysis": {
+      "hurricane_maria_inequities": "Black and low-income communities had longest power outages and least recovery aid",
+      "energy_apartheid": "Sacrifice zone communities still have poorest power reliability 8 years post-Maria",
+      "sea_level_rise": "Low-lying coastal communities lack resources for adaptation",
+      "climate_amplification": "Colonial status limits self-determination in climate response"
+    },
+
+    "organizing_victories": [
+      "Forced closure of AES Guayama coal plant (2022)",
+      "US Navy forced out of Vieques (2003) after decades of protest",
+      "Stopped second gas pipeline in Peñuelas",
+      "Community solar and microgrid projects across multiple municipalities"
+    ],
+
+    "ongoing_struggles": [
+      "Coal ash cleanup and remediation",
+      "Vieques Navy contamination comprehensive cleanup",
+      "Just transition to 100% renewable energy",
+      "FEMA discrimination and recovery justice",
+      "Air quality monitoring and enforcement",
+      "Gentrification and cultural land rights",
+      "Climate resilience and adaptation funding"
+    ],
+
+    "policy_recommendations": [
+      "Declare all mapped communities as Environmental Justice Priority Areas",
+      "Mandatory coal ash removal and remediation in Guayama-Salinas",
+      "Comprehensive Vieques cleanup with full community health support",
+      "100% renewable energy transition with community ownership priority",
+      "Reform FEMA aid distribution to address racial and economic equity",
+      "Constitutional right to clean environment in Puerto Rico",
+      "Self-determination in climate policy and energy systems",
+      "Rights of Nature constitutional amendments"
+    ],
+
+    "data_sovereignty_note": "This data compiled through community partnerships and is intended to support grassroots organizing and environmental justice advocacy. Commercial use requires community consent and benefit sharing."
+  }
+}
