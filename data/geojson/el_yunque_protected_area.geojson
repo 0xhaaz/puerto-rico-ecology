@@ -1,0 +1,166 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "name": "El Yunque National Forest",
+    "description": "Only tropical rainforest in the U.S. National Forest System",
+    "created": "2025-11-05",
+    "source": "USDA Forest Service, USGS",
+    "coordinate_system": "WGS84",
+    "area_acres": 28000,
+    "area_hectares": 11330,
+    "elevation_range_m": "0-1076",
+    "highest_peak": "El Toro (1,076 m / 3,533 ft)"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Yunque National Forest",
+        "designation": "National Forest",
+        "managing_agency": "USDA Forest Service",
+        "established": "1903",
+        "taino_name": "Yuké",
+        "protection_status": "National Forest (highest federal protection)",
+        "iucn_category": "II - National Park",
+        "unesco_status": "Biosphere Reserve",
+        "area_acres": 28000,
+        "area_km2": 113.3,
+        "municipalities": ["Río Grande", "Luquillo", "Fajardo", "Ceiba", "Naguabo", "Canóvanas", "Las Piedras"],
+        "annual_visitors": "600000+",
+        "visitor_center": "El Portal",
+        "biodiversity": {
+          "tree_species": "240+",
+          "bird_species": "60+",
+          "endemic_birds": 17,
+          "coqui_species": 13,
+          "orchid_species": "50+",
+          "fern_species": "150+"
+        },
+        "ecosystems": [
+          "Tabonuco Forest (200-600m)",
+          "Palo Colorado Forest (600-900m)",
+          "Sierra Palm Forest (600-900m)",
+          "Elfin Woodland / Cloud Forest (900m+)"
+        ],
+        "threats_2025": [
+          "Climate change (potential ecosystem transformation)",
+          "Hurricane damage (Maria 2017 recovery ongoing)",
+          "Invasive species",
+          "Increased storm intensity projections"
+        ],
+        "conservation_status_2025": "Protected but vulnerable to climate tipping point",
+        "cultural_significance": "Sacred mountain in Taíno cosmology, home of god Yuquiyú",
+        "key_species": [
+          "Puerto Rican Parrot (Amazona vittata) - Critically Endangered",
+          "Elfin-woods Warbler (Setophaga angelae) - Near Threatened",
+          "Puerto Rican Boa (Chilabothrus inornatus) - Vulnerable",
+          "Mountain Coquí (Eleutherodactylus portoricensis) - Endangered"
+        ],
+        "ecosystem_services": {
+          "water_supply": "Provides drinking water for ~20% of island population",
+          "carbon_storage": "Significant tropical forest carbon sink",
+          "biodiversity": "Critical refuge for Puerto Rico endemic species",
+          "recreation": "Major ecotourism destination",
+          "research": "NSF Long Term Ecological Research (LTER) site"
+        },
+        "website": "https://www.fs.usda.gov/elyunque",
+        "contact": "787-888-1880"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-65.8200, 18.3200],
+            [-65.7400, 18.3200],
+            [-65.7400, 18.2700],
+            [-65.7100, 18.2400],
+            [-65.7400, 18.2000],
+            [-65.7800, 18.1800],
+            [-65.8300, 18.2000],
+            [-65.8500, 18.2500],
+            [-65.8400, 18.2900],
+            [-65.8200, 18.3200]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Yunque Peak",
+        "feature_type": "Peak",
+        "elevation_m": 1065,
+        "elevation_ft": 3494,
+        "ecosystem": "Elfin Woodland (Cloud Forest)",
+        "access": "Hiking trail (strenuous)",
+        "cultural_significance": "Named after Taíno god Yuquiyú"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.7746, 18.3086]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Toro Peak",
+        "feature_type": "Peak",
+        "elevation_m": 1076,
+        "elevation_ft": 3533,
+        "highest_point": true,
+        "ecosystem": "Elfin Woodland (Cloud Forest)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.7593, 18.3012]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luquillo Experimental Forest (LTER Site)",
+        "feature_type": "Research Station",
+        "established": 1988,
+        "program": "NSF Long Term Ecological Research",
+        "focus": "Tropical forest dynamics, hurricane ecology, climate change",
+        "research_themes": [
+          "Hurricane disturbance and recovery",
+          "Climate change impacts on tropical forests",
+          "Forest biogeochemistry",
+          "Biodiversity and ecosystem function"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.8195, 18.3165]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Portal Visitor Center",
+        "feature_type": "Visitor Facility",
+        "services": ["Information", "Exhibits", "Ranger programs", "Gift shop"],
+        "accessible": true,
+        "status_2025": "Reopened post-Hurricane Maria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.8201, 18.3166]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Mina Waterfall",
+        "feature_type": "Waterfall",
+        "trail": "La Mina Trail (0.7 miles, moderate)",
+        "popular_destination": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-65.7911, 18.3044]
+      }
+    }
+  ]
+}

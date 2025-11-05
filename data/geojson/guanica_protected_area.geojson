@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "name": "Guánica Dry Forest Biosphere Reserve",
+    "description": "UNESCO Biosphere Reserve protecting subtropical dry forest ecosystem",
+    "created": "2025-11-05",
+    "source": "DRNA Puerto Rico, UNESCO MAB Programme",
+    "coordinate_system": "WGS84",
+    "area_acres": 9880,
+    "area_hectares": 4000,
+    "unesco_designation": "1981"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bosque Estatal de Guánica (Guánica State Forest)",
+        "designation": "State Forest / UNESCO Biosphere Reserve",
+        "managing_agency": "Puerto Rico DRNA",
+        "established": "1919",
+        "unesco_biosphere_reserve": "1981",
+        "protection_status": "State Forest with international recognition",
+        "iucn_category": "VI - Protected area with sustainable use",
+        "area_acres": 9880,
+        "area_km2": 40,
+        "municipalities": ["Guánica", "Guayanilla"],
+        "ecosystem_type": "Subtropical Dry Forest",
+        "rainfall_annual_inches": "30-40",
+        "biodiversity": {
+          "plant_species": "700+",
+          "bird_species": "185+",
+          "endemic_species": "48",
+          "tree_species": "129"
+        },
+        "key_features": [
+          "Best-preserved subtropical dry forest in the Caribbean",
+          "Extensive trail system (36 miles)",
+          "Coastal areas with mangroves",
+          "Marine component with coral reefs"
+        ],
+        "endemic_species_highlights": [
+          "Puerto Rican Nightjar (Antrostomus noctitherus) - rediscovered here 1961",
+          "Guánica Anole (Anolis cooki) - endemic to dry forest",
+          "Numerous endemic plants adapted to arid conditions"
+        ],
+        "threats_2025": [
+          "Climate change (increasing drought stress)",
+          "Invasive species (particularly plants)",
+          "Fire risk (increased with climate change and invasive grasses)",
+          "Coastal development pressure",
+          "Sea level rise affecting coastal forests"
+        ],
+        "conservation_status_2025": "Relatively intact but facing climate pressures",
+        "cultural_significance": "Traditional Taíno dry forest management, coastal fishing grounds",
+        "ecosystem_services": {
+          "biodiversity": "Critical refuge for dry forest specialists",
+          "carbon_storage": "Significant despite lower biomass than rainforest",
+          "coastal_protection": "Mangroves protect coastline",
+          "research": "Important site for dry forest ecology",
+          "recreation": "Hiking, birdwatching, ecotourism"
+        },
+        "marine_component": {
+          "coral_reefs": true,
+          "mangroves": true,
+          "seagrass_beds": true,
+          "protected": "Adjacent marine protected areas"
+        },
+        "trails": [
+          "Cueva Trail",
+          "Fuerte Trail",
+          "Ballena Trail",
+          "Meseta Trail",
+          "Granados Trail",
+          "Sendero Interpretativo"
+        ],
+        "website": "www.drna.pr.gov",
+        "contact": "787-999-2200"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-66.9200, 17.9800],
+            [-66.8700, 17.9800],
+            [-66.8500, 17.9650],
+            [-66.8600, 17.9400],
+            [-66.8900, 17.9300],
+            [-66.9200, 17.9350],
+            [-66.9400, 17.9500],
+            [-66.9300, 17.9700],
+            [-66.9200, 17.9800]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Parguera Natural Reserve",
+        "designation": "Natural Reserve",
+        "managing_agency": "DRNA Puerto Rico",
+        "area_hectares": 13000,
+        "ecosystem_types": ["Mangroves", "Coral reefs", "Seagrass beds"],
+        "adjacent_to": "Guánica Biosphere Reserve",
+        "key_features": [
+          "Extensive mangrove forests",
+          "Coral reef systems",
+          "Bioluminescent bay (seasonal)",
+          "Important marine biodiversity"
+        ],
+        "conservation_2025": {
+          "mangrove_restoration": "Ongoing post-Hurricane Maria recovery",
+          "coral_status": "Threatened by SCTLD and climate change",
+          "research": "2025 Ecosphere study on mangrove recovery"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-67.0700, 17.9700],
+            [-66.9800, 17.9700],
+            [-66.9800, 17.9200],
+            [-67.0000, 17.8800],
+            [-67.0500, 17.8800],
+            [-67.0700, 17.9200],
+            [-67.0700, 17.9700]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Guánica Lighthouse / Faro de Guánica",
+        "feature_type": "Historic Lighthouse",
+        "built": 1893,
+        "status": "Historic landmark",
+        "access": "Trail access"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.9197, 17.9513]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gilligan's Island (Cayo Aurora)",
+        "feature_type": "Cay",
+        "ecosystem": "Mangrove and beach",
+        "recreational_use": "Popular day trip destination",
+        "access": "Boat only",
+        "conservation_concern": "Visitor impacts on mangroves"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.8889, 17.9444]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Guánica Forest Reserve Office",
+        "feature_type": "Administrative Office",
+        "services": ["Information", "Trail maps", "Permits"],
+        "hours": "Variable - check before visiting"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.8735, 17.9641]
+      }
+    }
+  ]
+}
