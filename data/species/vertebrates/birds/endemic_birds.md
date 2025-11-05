@@ -5,11 +5,13 @@ Borikén is home to 17 endemic bird species, making it one of the most important
 ## Critically Endangered Species
 
 ### Iguaca / Cotorra Puertorriqueña (Puerto Rican Amazon)
-**Scientific Name**: *Amazona vittata*  
-**Taíno Name**: Iguaca  
-**Conservation Status**: Critically Endangered (~500 individuals)
+**Scientific Name**: *Amazona vittata*
+**Taíno Name**: Iguaca
+**Conservation Status**: Critically Endangered (IUCN)
+**Population (2021 data)**: 686 total individuals (50-200 wild, 300+ captive)
+**Current range**: Confined to 0.2% of former range
 
-The Iguaca is more than just Borikén's national bird—it is a living symbol of the island's resilience. Once numbering in hundreds of thousands, habitat destruction reduced the population to just 13 birds in 1975. Through dedicated conservation efforts, the population has slowly recovered.
+The Iguaca is more than just Borikén's national bird—it is a living symbol of the island's resilience. Once numbering in hundreds of thousands, habitat destruction reduced the population to just 13 birds in 1975/1976. Through one of the longest-running and most intensive endangered species recovery programs (established 1968), the population has slowly recovered to 686 individuals by 2021, though the species remains critically endangered and confined to a tiny fraction of its historical range.
 
 **Cultural Significance:**
 - Sacred to the Taíno, who believed these birds carried messages between the earthly and spiritual realms
@@ -188,18 +190,24 @@ The smaller of Borikén's two endemic hummingbirds, known for its iridescent gre
 
 ## Conservation Challenges and Efforts
 
-### Current Threats
-- Habitat loss and fragmentation
-- Invasive species competition
-- Climate change impacts
-- Hurricane damage
-- Cowbird parasitism (for some species)
+### Current Threats (2025)
+- **Habitat loss and fragmentation**: Continuing primary threat despite protected areas
+- **Invasive species competition**: Non-native birds, mammals, and plants
+- **Climate change impacts**: Altered rainfall patterns, temperature increases, shifting ecosystems
+- **Hurricane damage**: More frequent and intense storms; Hurricane Maria (2017) caused significant setbacks; eight years later in 2025, forests still showing recovery
+- **Cowbird parasitism**: Particularly affecting Yellow-shouldered Blackbird
+- **Disease**: Emerging pathogens, especially in captive populations
+- **Limited genetic diversity**: Small founding populations creating genetic bottlenecks
+- **Extreme weather**: Droughts and temperature extremes affecting breeding success
 
-### Conservation Success Stories
-- Puerto Rican Amazon recovery from 13 to ~500 birds
-- Habitat restoration in El Yunque and Guánica
-- Community-based monitoring programs
-- Ecotourism supporting local conservation
+### Conservation Success Stories (2025 Update)
+- **Puerto Rican Amazon recovery**: Increased from 13 birds (1975/1976) to 686 birds (2021 count - 50-200 wild, 300+ captive), though goal to downlist to "threatened" status by 2020 not yet achieved; species remains critically endangered
+- **Multiple breeding facilities**: Hurricane-resistant locations established to prevent single-event catastrophic loss
+- **Second wild population**: Successfully established in Rio Abajo State Forest
+- **Habitat restoration**: Ongoing efforts in El Yunque, Rio Abajo, and other areas
+- **Community-based monitoring programs**: Local involvement in conservation
+- **Ecotourism supporting conservation**: Sustainable revenue generation
+- **International collaboration**: World Parrot Trust and other organizations supporting recovery
 
 ### Traditional Ecological Knowledge
 - Taíno seasonal observations guide modern conservation timing
