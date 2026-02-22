@@ -1,23 +1,22 @@
-# Borikén Biodiversity Smart Contracts 🌿
+# Borikén Biodiversity 🌿
 
-> **Professional Base Ecosystem Portfolio by haaz.eth**
+> Smart contracts and data infrastructure for Puerto Rican biodiversity — exploring how on-chain tools might serve ecological knowledge, indigenous data sovereignty, and community science.
 
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue.svg)](https://soliditylang.org/)
 [![Hardhat](https://img.shields.io/badge/Framework-Hardhat-orange.svg)](https://hardhat.org/)
 [![Base](https://img.shields.io/badge/Network-Base%20Sepolia-blue.svg)](https://base.org/)
 
-**Developer:** [haaz.eth](https://base.org) | **Revenue:** [bakine.studio](https://bakine.studio)
+**Developer:** [0xhaaz](https://github.com/0xhaaz)
 
-## 🎯 Overview
+## Why This Exists
 
-Professional smart contract system demonstrating Puerto Rico biodiversity data management with:
+Puerto Rico's biodiversity is under compounding threat from climate disaster, colonial extraction, and displacement. This project explores how on-chain tools — registries, NFTs, and lightweight governance — might serve ecological knowledge in ways that center indigenous data sovereignty and community science rather than corporate extraction.
 
-- **Multi-contract architecture** (Registry, NFT, DAO)
-- **Revenue distribution** (70% creator, 30% bakine.studio)
-- **Cultural data preservation** with technical innovation
-- **Production-ready** deployment practices
+It asks: Who gets to define, record, and benefit from biodiversity data? What does it mean to put species data on-chain when the land those species live on is being sold out from under the communities that steward it?
 
-## 📋 Live Contracts (Base Sepolia)
+This is a proof of concept built on Base Sepolia testnet, not a production system.
+
+## 📋 Contracts (Base Sepolia Testnet)
 
 | Contract | Purpose | Address |
 |----------|---------|---------|
@@ -33,8 +32,8 @@ Professional smart contract system demonstrating Puerto Rico biodiversity data m
 
 ### Installation & Deployment
 ```bash
-git clone https://github.com/yourusername/borikua-biodiversity-portfolio
-cd borikua-biodiversity-portfolio
+git clone https://github.com/0xhaaz/puerto-rico-ecology.git
+cd puerto-rico-ecology
 npm install
 
 # Set up environment
@@ -58,30 +57,8 @@ contracts/
 ### Key Features
 - ✅ **Gas Optimized** - IR compilation, efficient storage
 - ✅ **OpenZeppelin v5** - Latest security standards
-- ✅ **Revenue Distribution** - Automated payment splitting
 - ✅ **Access Control** - Role-based permissions
 - ✅ **Cultural Respectful** - Indigenous data protocols
-
-## 💼 Professional Skills Demonstrated
-
-- **Smart Contract Development** - Solidity 0.8.20+, OpenZeppelin v5
-- **Base Ecosystem** - L2 deployment, BaseScan integration
-- **Production Practices** - Testing, deployment scripts, documentation
-- **Business Logic** - Revenue systems, governance, NFT metadata
-- **Security** - Access control, input validation, reentrancy protection
-
-## 💰 Revenue Model
-
-```
-All contract revenue splits automatically:
-├── 70% → haaz.eth (creator/developer)
-└── 30% → bakine.studio (development fund)
-
-Revenue sources:
-├── NFT minting (0.005 ETH)
-├── DAO membership (0.001 ETH)
-└── Direct donations
-```
 
 ## 🔧 Development Commands
 
@@ -96,28 +73,26 @@ npm run verify         # Verify on BaseScan
 ## 📁 Project Structure
 
 ```
-borikua-biodiversity-portfolio/
-├── contracts/          # Smart contracts
-├── scripts/deploy/     # Deployment scripts
-├── test/              # Test files
-├── hardhat.config.js  # Hardhat configuration
-└── package.json       # Dependencies
+puerto-rico-ecology/
+├── contracts/          # Solidity smart contracts (Registry, NFT, DAO)
+├── scripts/            # Deployment scripts
+├── test/               # Contract tests
+├── data/               # Ecological reference data
+├── assets/             # Visual assets
+├── references/         # Research references
+├── game-context/       # Game development context (WIP)
+└── hardhat.config.js   # Hardhat configuration
 ```
 
-## 🌟 For Employers
+## 🔗 Related Work
 
-**Why This Portfolio Matters:**
-1. **Real Application** - Beyond toy contracts, practical biodiversity use case
-2. **Base Focus** - L2 expertise and ecosystem commitment
-3. **Production Ready** - Professional standards and deployment practices
-4. **Cultural Innovation** - Respectful Indigenous data preservation
-5. **Revenue Generation** - Working tokenomics and business model
+- <a href="https://github.com/0xhaaz/Community-DeFi-Protocol">Community DeFi Protocol</a> — Mutual aid and spiritual labor recognition contracts
+- <a href="https://github.com/0xhaaz/coqui-island-hopper">Coquí Island Hopper</a> — Interactive ecological education game
+- <a href="https://github.com/0xhaaz/coqui-solitaire">Coquí Solitaire</a> — Puerto Rican-themed card game
 
 ## 🤝 Contact
 
-- **Developer:** haaz.eth
-- **Studio:** [bakine.studio](https://bakine.studio)
-- **Network:** Base Ecosystem
+- **Developer:** [0xhaaz](https://github.com/0xhaaz)
 
 ## 📄 License
 
@@ -125,4 +100,4 @@ MIT License - see [LICENSE](LICENSE) file.
 
 ---
 
-**Built with ❤️ for Borikén biodiversity and the Base ecosystem** 
+**Built with ❤️ for Borikén biodiversity** 
